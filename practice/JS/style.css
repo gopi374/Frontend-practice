@@ -1,0 +1,133 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    color: wheat;
+    background-color: black;
+}
+main{
+    margin: 5px;
+    background: rgb(64, 66, 68);
+}
+nav{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding-top: 10px;
+}
+header{
+    font-size: 20px;
+    color: bisque;
+}
+header h5{
+    margin-left: 30px;
+   text-align: left;
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.nav a{
+    color: bisque;
+    font-size: 20px;
+    text-decoration: none;
+    width: 100px;
+    gap: 50px;
+}
+.main{
+    display: flex;
+
+}
+.hero{
+    margin: 20px;
+    font-family: monospace;
+    width: 500px;
+    height: 400px;
+    /* background: #69171/7; */
+}
+#hero-txt{
+    padding-left: 20px;
+
+    margin-left: 40px;
+}
+#hero-txt h2{
+    font-size: 50px;
+}
+#hero-txt p{
+    padding-top: 20px;
+    font-size: 14px;
+}
+.but{
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+}
+#but1{
+    font-family: serif;
+    border: none;
+    padding: 10px 20px;
+}
+.but1{
+    margin: 0px;
+    position: absolute;
+    right: ;
+    top: 341.5px;
+}
+.but2{
+    left: 210px;
+    position:absolute;
+}
+.hero img{
+    padding: 10px 100px;
+    width: 380px;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+}
+
+#about{
+    width: 1500px;
+    height: 400px;
+    background: #fd6868;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.ab{
+    margin: 10px;
+}
+.about{
+    padding-top: 10px;
+    margin-top: 40px;
+    margin: 10px;
+}
+.about h2{
+    font-weight: 100;
+    text-align: center;
+}
+.content p{
+    margin: 20px 40px;
+    color: #000000;
+    font-style: italic;
+}
+.h4{
+      font-weight: 100;
+    text-align: center;
+}
+.bmain{
+    /* display: flex; */
+}
+.button{
+    margin-left: 40px;
+    gap: 60px;
+    background: #000;
+    border: none;
+    color: #fff;
+    width: 55px;
+    height: 30px;
+}

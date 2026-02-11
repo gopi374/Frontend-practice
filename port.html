@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            width: 100%;
+            transition: opacity 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .setup-instructions {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .setup-instructions h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .setup-instructions code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>Hello! I'm a passionate web developer with expertise in creating beautiful and functional websites. I love turning ideas into reality through clean code and thoughtful design.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>E-Commerce Website</h3>
+                <p>A fully responsive online store built with modern web technologies.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Custom portfolio design for a creative professional.</p>
+            </div>
+            <div class="project-card">
+                <h3>Task Management App</h3>
+                <p>Intuitive task tracker with real-time updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        
+        <div class="setup-instructions">
+            <h4>⚠️ Setup Required:</h4>
+            <p>Replace <code>YOUR_GOOGLE_SCRIPT_URL</code> in the JavaScript code below with your Google Apps Script Web App URL to enable form submission.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">Send Message</button>
+
+            <div class="message" id="responseMessage"></div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Replace with your Google Apps Script Web App URL
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDLVpucjfApsEBZISL9RFjMWShI5c60y2ltQCefwgHLpGVPy-nCe6nWo1HNNmPf-Km/exec';
+
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const responseMessage = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            responseMessage.style.display = 'none';
+
+            // Get form data
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+                timestamp: new Date().toLocaleString()
+            };
+
+            try {
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                // Since mode is 'no-cors', we won't get a readable response
+                // We'll assume success if no error was thrown
+                showMessage('Thank you! Your message has been sent successfully.', 'success');
+                form.reset();
+
+            } catch (error) {
+                showMessage('Oops! Something went wrong. Please try again.', 'error');
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+
+        function showMessage(text, type) {
+            responseMessage.textContent = text;
+            responseMessage.className = `message ${type}`;
+            responseMessage.style.display = 'block';
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                responseMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

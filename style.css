@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+/*
+h1{
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightseagreen;
+    font-weight: 500;
+    width: 100px;
+    height: 40px;
+    margin: 10px 30px;
+    padding: 10px 20px;
+    border: 5px solid rgb(128, 13, 48);
+    border-radius: 50%;
+
+}
+h1:hover{
+    background: #000;
+}
+#box{
+    height: 550px;
+    width: 550px;
+    background-color: aqua;
+    margin: 20px, 15px;
+}
+#child{
+    padding-top: 50px;
+    width: 50%;
+    height: 50%;
+    background-color: crimson;
+} */
+
+
+/* button{
+    background: transparent;
+    color: black;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 70px;
+    padding: 10px 10px;
+    margin: 50px;
+    border-radius: 5%;
+    border: 2px solid black;
+}
+button:hover{
+    background: #000;
+    color: beige;
+} */
+/* 
+div{
+    display: flex;
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    background: crimson;
+    
+    border: 2px solid rgb(255, 255, 255);
+}
+#box1:hover{
+    
+    z-index: 2;
+}
+#box2{
+    left: 60%;
+    top: 60%;
+    z-index: 1;
+    transform: translate(-60%,-60%);
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(210, 213, 26);
+    border: 2px solid rgb(255, 255, 255);
+} */
+/* 
+
+h1{
+    margin: 200px;
+    width: 220px;
+    color: aliceblue;
+    font-size: 900;
+}
+h1 span{
+    font-size: 60px;
+    padding: 0px 20px 20px 20px;
+    color: aquamarine;
+    font-weight: 400;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+}
+h1 span:hover{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: aquamarine;
+    color: rgb(0, 0, 0);
+} */
+
+#parent{
+    
+    width: 100%;
+    height: 100%;
+    background: royalblue;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+}
+.child{
+    
+    background-size: cover;
+    
+    width: 100px;
+    height: 100px;
+    /* background: crimson; */
+    border: 2px solid white;
+}
+#child1{
+    background-image: url(/Amazon-Logo.JPEG);
+}
+#child2,#child4{
+    background-image: url(/G.png);
+}
+#child3{
+    background-image: url(/Amazon-Logo.JPEG);
+}
