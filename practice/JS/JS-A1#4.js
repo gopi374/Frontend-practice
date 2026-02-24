@@ -11,7 +11,7 @@ function check(n) {
   }
 }
 check(15);
-console.log("-----------------task 6-------------------------------------")
+console.log("----------------task 6-------------------------------------")
 
 //Task 6 -- Print numbers from 1 to 15. If divisible by 5, print "Hello"
 for (let i = 1; i <= 15; i++) {
