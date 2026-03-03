@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: rgb(247, 244, 244);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: cursive;
+            margin: 0;
+        }
+        #slide-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100%;
+            background: rgba(0.4, 0, 0, 0.4);
+            color: #fff;
+            overflow-y: auto;
+            transition: left 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+            z-index: 99;
+        }
+
+        #slide-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+
+        #slide-menu ul li {
+            padding: 15px 20px;
+        }
+
+        #slide-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #slide-menu ul li #book-now-button {
+            background-color: #5C0000;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #menu-toggle {
+            cursor: help;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        span{
+            margin-left: 50px;
+            display: inline-block;
+            color: blue;
+            animation: bounce 10s infinite;
+        }
+        @keyframes bounce {
+            50% {
+                transform: translateY(100px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <span id="menu-toggle">☰</span>
+    <div id="slide-menu">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><button id="book-now-button" class="btn"><a href="contact.html"><i class="fas fa-calendar-alt"></i> Book Now</a></button></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const slideMenu = document.getElementById('slide-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            slideMenu.style.left = menuToggle.classList.contains('active') ? '0' : '-100%';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        CSS transition-duration Property
+    </title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 70px;
+            background: green;
+            transition-property: width;
+            transition-duration: 5s;
+
+            /* For Firefox browser */
+            -webkit-transition-property: width;
+            -webkit-transition-duration: 5s;
+            transition-delay: .2s;
+            display: inline-block;
+        }
+
+        div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body style="text-align:center;">
+
+    <h1>GeeksforGeeks</h1>
+
+    <h2>Transition Property</h2>
+
+    <div>
+        <p>transition-duration: 5s</p>
+    </div>
+</body>
+</html>

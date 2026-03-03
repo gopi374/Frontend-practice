@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    font-family: 'cursive';
+    width: 100%;
+    heigh: 100%;
+    display: flex;
+    margin: 50%;
+}
+.shape{
+    margin: 5px;
+    width: 100px;
+    heigh: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #42c7d3;
+    position: fixed; /* Use fixed positioning for smooth tracking */
+}

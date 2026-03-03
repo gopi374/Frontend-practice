@@ -1,0 +1,60 @@
+<html>
+<head>
+    <style>
+        .box {
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            animation-name: moveRight,slide,fadeIn;
+                        /*animation-name: moveLeft;*/
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moveRight {
+        /*@keyframes moveLeft {*/
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> >></div>
+</body>
+</html>
+
+<!-- <html>
+<head>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			animation: changeColor 2s infinite/*it will be run by infinite it can take number of turns*/;
+		}
+
+		@keyframes changeColor {
+			from {
+				background-color: blue;
+				color: red;
+			}
+
+			to {
+				background-color: green;
+				color: yellow;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">heeloo</div>
+</body>
+
+</html> -->
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            transition: transform 0.6s ease;
+        }
+        .rotate{
+            transform: rotate(360deg);
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <button style="width: auto; color:greenyellow; background:black; margin: 20px" onclick="alert('Button clicked !')">click me !!</button>
+    <div onmouseover="this.style.backgroundColor='yellow'" style="width: 200px; text-align:center";>hover over me</div>
+    <div onmouseout="this.style.backgroundColor='white'" style="width: 200px; text-align:center";>hover out me</div>
+    <div onmousedown="this.style.backgroundColor='red'" style="width: 200px; text-align:center";>Press me</div>
+    <div onmouseup="this.style.backgroundColor='green'" style="width: 200px; text-align:center ; cursor: pointer";>Release me</div>
+    <input type="text" onfocus="this.style.backgrounColor='black'"><br>
+    <div oncopy="alert('text copied')" style="width: 200px; text-align:center";>copy me </div>
+
+
+    <form onsubmit="alert('form submitted'); return false;">
+        <input type="text">
+        <button type="submit">submit</button>
+    </form>
+
+
+   
+    <img id="image" src="38.jpg" width="200px" ><br>
+    <button id="rotatebtn" style='cursor: pointer; margin-left:30px ;'>Rotate image</button>
+    <script>
+        document.getElementById('rotatebtn').addEventListener('click', function(){
+            let img = document.getElementById('image');
+            img.classList.toggle('rotate');
+        })
+    </script>
+</body>
+</html>
