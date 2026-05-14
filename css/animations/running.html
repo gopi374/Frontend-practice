@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS animation-play-state Property - Running Animation</title>
+    <style>
+        body {
+            text-align: center;
+            width: 70%;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .running {
+            width: 50px;
+            height: 50px;
+            background: green;
+            position: relative;
+            -webkit-animation: mymove 5s linear infinite;
+            /* Webkit prefix */
+            animation: mymove 5s linear infinite;
+            animation-play-state: running;
+            /* Animation is running */
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0%;
+            }
+
+            to {
+                left: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>animation-play-state property - Running Animation</h2>
+    <div class="running"></div>
+</body>
+
+</html>
