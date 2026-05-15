@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- <meta http-equiv="refresh" content="5"> -->
+
+    <meta name="author" content="John Doe">
+
+    <title>Meta Tag Example</title>
     <style>
-        body{
+        body {
             font-family: 'sans-serif';
             background-color: crimson;
         }
-        h2{
+
+        h2 {
             padding: 5px;
             text-align: center;
             background: white;
-            border-radius: 200px ;
+            border-radius: 200px;
         }
-        form{
-            
+
+        form {
+
             width: 320px;
             height: 300px;
             background: #e2dbdb;
         }
-        button{
+
+        button {
             font-weight: 900;
             background: #000;
             color: white;
@@ -29,29 +37,38 @@
             border-radius: 10%;
             padding: 5px;
         }
-        button:hover{
+
+        button:hover {
             color: black;
             background: white;
         }
-        table{
-           
+
+        table {
+
             border-collapse: collapse;
-            border: 2px solid #000;
+            border: 2px dashed #000;
             gap: 20px;
             background-color: aquamarine;
         }
-        
-        thead,th{
-            padding: 20px;
+
+        thead {
             font-family: serif;
             font-weight: 900;
             border: 2px dashed black;
         }
-        td{
+
+        tbody>tr:nth-of-type(even) {
+            background-color: rgb(237 238 242);
+        }
+
+        td,
+        th {
+            padding: 20px;
             border: 2px dashed black;
         }
     </style>
 </head>
+
 <body>
     <!-- <h2>form</h2>
     <form action="url" method="get" autocomplete="on" target="_self">
@@ -66,7 +83,7 @@
 
     <table align="center">
 
-       <thead align="center">
+        <!-- <thead>
         <tr >
             <th>name</th>
             <th>id</th>
@@ -86,7 +103,77 @@
             <td>75578</td>
         </tr>
        </tbody>
-        <tfoot><tr><th>end</th><td>50</td></tr></tfoot>
+        <tfoot><tr><th align="left">end</th><td>50</td></tr></tfoot> -->
+
+        <tr>
+            <th>name</th>
+            <th>id</th>
+            <th>scholarno</th>
+            <th>mobile no.</th>
+        </tr>
+        <tr>
+            <td>gopi</td>
+            <td>3110</td>
+            <td>3112</td>
+            <td>79389600475</td>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>7545</td>
+            <td>5458895</td>
+            <td>7415236980</td>
+        </tr>
+        <tr>
+            <td>client</td>
+            <td>789</td>
+            <td>74589</td>
+            <td>1452639870</td>
+        </tr>
     </table>
+    <ol>
+        <li>
+            apple
+        </li>
+        <li>bNn</li>
+        <LI>GOPI</LI>
+        <li>
+            <ul style="font-weight: 700; color:rgb(188, 152, 11);">NAME<li>hii</li>
+                <li>my </li>
+                <li>name</li>
+                <li>is </li>
+                <li>gopi</li>
+            </ul>
+        </li>
+    </ol>
+    <ul>
+        <li></li>
+    </ul>
+
+    <video src="rabb" controls autoplay muted width="200px" height="200px" loop poster="download.jpg">
+        <p>
+            Your browser doesn't support HTML video. Here is a
+            <a href="rabbit320.webm">link to the video</a> instead.
+        </p>
+    </video>
+
+    <audio src="amp.mp3" draggable="false" controls></audio>
+
+    <iframe src="https://youtube.com/embed/jBWKpN5cZIg?list=RDPT2_F-1esPk" width="300" height="300"
+        allowfullscreen="true" loading="easer" title="Example Site">
+    </iframe>
+    <canvas id="myCanvas" width="300" height="150"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 90, 100, 80);
+    </script>
+
+    <svg width="300" height="150">
+  <rect x="50" y="30" width="100" height="80" fill="blue" />
+</svg>
 </body>
+
 </html>
