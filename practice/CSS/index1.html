@@ -27,11 +27,32 @@
             flex-shrink: 0;
 
             .div1{
+                top: 10%;
+                position: relative;
                 color: aqua;
-                background: #000;
+                background: #b313132c;
+                height: 50%;
+                width: 50%;
+                z-index: 1;
+                flex-shrink: 0;
+            }
+            .div2{
+                /* top: 10%; */
+                position: relative;
+                color: aqua;
+                z-index: 0;
+                background: #0b9c69;
                 height: 50%;
                 width: 50%;
                 flex-shrink: 0;
+            }
+            .div3{
+                background: #d7e34bd6;
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                top: 0;
+                left: 10%;
             }
             
         }
@@ -42,6 +63,8 @@
 <body>
     <div class="div">
         <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
         
 </body>
 
