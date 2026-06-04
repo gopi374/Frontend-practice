@@ -8,6 +8,7 @@ body {
   background-color: crimson;
   font-family: "Segoe UI", Tahoma, sans-serif;
 }
+
 .div1{
   margin: 10px;
   min-width: 100px;
@@ -16,10 +17,22 @@ body {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: #000;
+  background-color: #000; /*hex code*/
+  background-color: blue; /*color by name*/
+  background-color: rgb(20, 10, 60); /*rgb*/
+  background-color: rgba(80, 40, 32, 10%); /*rgba with transparency*/
+  background-color: hsl(40, 5%, 20%);
+    background-color: hsla(40, 5%, 40%,0.5);
+
+}
+.div2{
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
 }
 
 .pad{
+  box-shadow: 10px 1px 4px rgba(238, 62, 3, 0.9);
   margin: 50px;
   position: relative;
   padding: 60px;
@@ -27,6 +40,28 @@ body {
   text-align: center;
   border: 10px solid white;
   background-color: #adee07;
+  /* color: #FF5733; */
+  text-shadow: 4px 4px 5px rgba(12,10,20,0.5);
   width: 100px;
   height: 100px;
+}
+
+.div3{
+  align-items: center;
+  width: 300px;
+  height:300px;
+  box-shadow: 4px 10px 4px rgba(14, 3, 2, 0.773);
+  background-image: url(gopi.jpg);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  border: 2px solid #adee07;
+  background-position: left bottom;
+  background-origin: padding-box;
+  /* background: linear-gradient(195deg,red,black); */
+}
+.div4{
+  width:400px;
+  height: 400px;
+  background-color: red;
+  background-clip: content-box;
 }
