@@ -10,9 +10,9 @@ body {
   height: 100%;
   color: white;
   background: linear-gradient(
-        135deg,
-        #d2fdaa,
-        #51f484,
+        125deg,
+        #911218,
+        #b0571c,
         #dc6c1c
     );
 }
@@ -23,7 +23,7 @@ body{
 .div1{
     margin: 10%;
     width: 300px;
-    height: 420px;
+    height: 400px;
     background: rgba(255, 255, 255, 0.275);
     backdrop-filter: blur(10px);
     border: 2px solid rgb(196, 255, 229);
@@ -68,7 +68,9 @@ img{
     border-radius: 50%;
 }
 button{
-   
+    background: #000;
+    color: wheat;
+    font-weight: 900;
     margin: 15px 15px 0px 15px;
     padding: 7px;
 }
@@ -77,10 +79,4 @@ button{
      align-items: center;
     justify-content: center;
     bottom: 40px;
-}
-button:hover{
-    background: #000;
-    color: white;
-    font-weight: 900;
-    
 }
