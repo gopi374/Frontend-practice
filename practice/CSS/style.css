@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+#parent{
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 20px 1fr;
+
+    grid-template-rows: 100px 1fr 25% 1fr;
+    grid-auto-flow: row;
+}
+
+#child1{
+    background-color: crimson;
+    border: 2px solid white;
+}
+#child2{
+    background-color: rgb(44, 220, 135);
+    border: 2px solid white;
+}
+#child3{
+    background-color: rgb(171, 223, 50);
+    border: 2px solid white;
+}
+#child4{
+    background-color: rgb(172, 54, 117);
+    border: 2px solid white;
+}
