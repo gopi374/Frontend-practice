@@ -14,15 +14,19 @@ body {
     width: 100%;
     background-color: #000000;
     display: grid;
-    grid-template-columns: 1fr 1fr 20px 1fr;
+    grid-template-columns: 1fr minmax(100px , 300px) 1fr;
 
-    grid-template-rows: 100px 1fr 25% 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: row;
 }
 
-#child1{
+#child1{ 
+    /* align-self: center;
+    justify-self: center; */
     background-color: crimson;
     border: 2px solid white;
+    /* height: 200px;
+    width: 200px; */
 }
 #child2{
     background-color: rgb(44, 220, 135);
