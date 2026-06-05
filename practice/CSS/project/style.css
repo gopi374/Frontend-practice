@@ -3,6 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-html body{
+html{
     
+    background: url(https://images.pexels.com/photos/30111478/pexels-photo-30111478.jpeg) fixed center center no-repeat ;
+    background-size: cover;
+    
+}
+h1{
+    margin: 20px;
+    border: 2px solid ;
+    font-size: 3vh;
+    color: #ffffff;
+    background: #d46a2c;
+    text-align: center;
+    padding: 10px;
+}
+span{
+    color: red;
+    margin: 20px;
+    background-color: aqua;
+    font-size: 30px;
+}
+p{
+    background-color: #ffffff;
+    display: inline;
 }
