@@ -19,15 +19,30 @@ nav{
     border: 2px solid white;
     border-radius: 20px;
     padding: 10px;
+    font-family: monospace;
+    font-weight: 100;
 }
 .nav1{
+    font-weight: 100;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
+.nav1 i{
+     
+    text-decoration: none;
+    color: crimson;
+}
+
+#con{
+    color: black;
+    background: #45f6d5;
+}
 .nav2{
+    margin-left: 20px;
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,16 +50,32 @@ nav{
     padding-right: 10px;
 }
 .nav2 a{
+    font-weight: 100;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
     background-color: crimson;
     border-radius: 20px;
 }
+#menu{
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+.nav2 h4{
+    display: none;
+}
 
 @media (max-width : 786px) {
     nav{
-        background: #ffffff;
+        background: lightcoral;
     }
+   
+    .nav2 a{
+        display: none;
+    }
+    .nav2 h4{
+    display: block;
+}
     
 }
