@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document -display- Grid</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          color: black;
+          background-color: #000;
+        }
+        .parent{
+            color: white;
+            margin: 20px;
+            border: 2px dashed white;
+            border-radius: 10px;
+            /* width: 500px; */
+            height: 80%;
+            display: grid;
+            grid-template-columns: 150px auto 150px;
+            grid-template-rows: 100px 500px 150px;
+            grid-template-areas: "navbar navbar navbar"
+            "sidebar content sider"
+            "footer footer footer";
+
+        }
+        #nav{
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            gap: 20px;
+            background-color: #ffd900;
+            grid-area: navbar;
+        }
+        li{
+            list-style-type: none;
+            background: #e67878;
+            border-radius: 15px;
+            padding: 5px;
+        }
+        #side{
+            background-color: lightblue;
+            grid-area: sidebar;
+            grid-row: ;
+        }
+        #content{
+            background-color: rgb(61, 241, 187);
+            grid-area: content;
+        }
+        #footer{
+            background-color: lightcoral;
+            grid-area: footer;
+        }
+        #sider{
+            grid-area: sider;
+            background-color: lightcyan;
+        }
+        .child{
+            padding: 20px;
+            border: 2px solid rgb(35, 0, 14);
+            text-align: center;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child" id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>classes</li>
+            <li>courses</li>
+            <li>contact</li>
+        </div>
+        <div class="child" id="side">sidebar</div>
+        <div class="child" id="content">content</div>
+        <div class="child" id="sider">sider</div>
+        <div class="child" id="footer">footer</div>
+       
+    </div>
+    
+</body>
+</html>

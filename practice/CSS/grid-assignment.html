@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+        }
+        .parent{
+            margin:20px 20px 0px 20px;
+            border: 2px dashed white;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: 
+            "red red black blue"
+            "pink green green blue"
+            "pink yellow yellow yellow"
+            ;
+            position: absolute;
+        }
+        .parent::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none; /* Allows clicks to pass through to your content elements */
+            z-index: 10;          /* Forces lines to stay on top of colors */
+            
+            /* Generates three vertical and two horizontal repeating dashed lines */
+            background-image: 
+                linear-gradient(to bottom, #ffffff 50%, transparent 50%), /* Vert line 1 */
+                linear-gradient(to bottom, #ffffff 50%, transparent 50%), /* Vert line 2 */
+                linear-gradient(to bottom, #ffffff 50%, transparent 50%), /* Vert line 3 */
+                linear-gradient(to right, #ffffff 50%, transparent 50%),  /* Horiz line 1 */
+                linear-gradient(to right, #ffffff 50%, transparent 50%);  /* Horiz line 2 */
+            
+            /* Sets thickness: 2px wide for vertical lines, 2px tall for horizontal lines */
+            background-size: 2px 16px, 2px 16px, 2px 16px, 16px 2px, 16px 2px;
+            background-repeat: repeat-y, repeat-y, repeat-y, repeat-x, repeat-x;
+            
+            /* Places lines precisely along the 4x3 grid coordinates */
+            background-position: 25% 0, 50% 0, 75% 0, 0 33.33%, 0 66.66%;
+        }
+
+        #black{
+            grid-area: black;
+            background-color: #000;
+
+        }
+        #blue{
+            grid-area: blue;
+            background-color: #1b3d72;
+
+        }
+        #yellow{
+            grid-area: yellow;
+            background-color: #d0d303;
+
+        }
+        #pink{
+            grid-area: pink;
+            background-color: #c51d8a;
+
+        }
+        #green{
+            grid-area: green;
+            background-color: #06d303;
+
+        }
+        #red{
+            grid-area: red;
+            background-color: #d30303;
+        }
+        .child{
+            width: 200px;
+            padding: 16px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child" id="red"></div>
+        <div class="child" id="black"></div>
+        <div class="child" id="blue"></div>
+        <div class="child" id="green"></div>
+        <div class="child" id="pink"></div>
+        <div class="child" id="yellow"></div>
+    </div>
+    
+</body>
+</html>
