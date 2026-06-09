@@ -24,7 +24,7 @@
             border: 2px dashed white;
             border-radius: 10px;
             /* width: 500px; */
-            height: 80%;
+            /* height: 80%; */
             display: grid;
             grid-template-columns: 150px auto 150px;
             grid-template-rows: 100px 500px 150px;
@@ -69,6 +69,26 @@
             border: 2px solid rgb(35, 0, 14);
             text-align: center;
             color: black;
+        }
+
+        @media screen and (max-width:400px) {
+            .parent{
+            color: rgb(0, 0, 0);
+            margin: 20px;
+            border: 2px dashed rgb(213, 26, 26);
+            border-radius: 10px;
+            /* width: 500px; */
+            height: 80%;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: 100px 500px 150px;
+            grid-template-areas: "navbar"
+            "sidebar"
+            "content"
+            "sider"
+            "footer";
+
+        }
         }
 
     </style>
