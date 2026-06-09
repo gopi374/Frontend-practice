@@ -47,12 +47,27 @@ body {
   align-items: center;
   justify-content: left;
   gap: 10px;
+
+  .logo-m{
+    display: flex;
+    gap: 10px;
+  }
+
+  .inp{
+    width: 11vw;
+    padding: 5px;
+    border: 2px solid rgb(15, 15, 15);
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    
+    input {
+        outline: none;
+        border: none;
+    }
+  }
 }
-input {
-  background: #f2f2f2;
-  border-radius: 20px;
-  padding: 5px 10px;
-}
+
 #h4 {
   font-size: 25px;
   font-style: italic;
@@ -72,14 +87,17 @@ input {
   justify-content: right;
 }
 .a {
-  color: #000;
+  font-weight: 100;
+  color: #6b6b6b;
   text-decoration: none;
 }
 .menu {
-  color: aliceblue;
+  color: #6b6b6b;
 }
 
 .side-nav{
+    font-weight: 100;
+    color: #6b6b6b;
     height: 30vh;
     width: 15vw;
     align-items: center;
@@ -112,6 +130,7 @@ input {
     }
 }
 .side-nav-b{
+    color: #6b6b6b;
     height: 30vh;
     width: 15vw;
     align-items: center;
@@ -126,7 +145,7 @@ input {
     width: 10vw;
     }
     a{
-        color: #000;
+        color: #6b6b6b;
         font-weight: 800px;
     }
 }
@@ -139,14 +158,16 @@ li{
 }
 
 /* content */
+#content{
+    
+}
 .cont{
-      display: flex;
-      align-items: center;  
-      justify-content: center;
-      border: 2px solid red;
+    width: 700px;
+    justify-self: center;
+    /* border: 2px solid black; */
+    margin: 1% 2% 0 2%;
 }
 .promo{
-    /* align-items: center; */
     justify-content: center;
     padding-top: 12.5px;
     font-weight: 200;
@@ -167,21 +188,28 @@ li{
     }
 }
 .nav-f{
-    padding: 20px 0px 0px 20px;
+    width: 750px;
+    justify-self: center;
+    margin-left: 1.8vw;
+    margin-top: 2vh;
     display: flex;
     align-items: center;
-    justify-content: start;
 
     h4{
         font-weight: 100;
-        margin: 10px;
+        margin: 8px;
     }
     
 }
 hr{
-    margin-left: 29.5px;
-    width: 90%;
+    margin-left: 1px;
+    width: 100%;
 }
+.content-hr{
+    margin-left: 280px;
+    width: 50%;
+}
+
 
 .cntnt-info{
 
@@ -201,6 +229,36 @@ hr{
 
     }
 
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .hero-txt{
+        h2{
+            font-size: 35px;
+        }
+    }
+
+    .hero-img{
+        display: flex;
+        flex-wrap: wrap;
+        img{
+            /* width: 150px; */
+        }
+    }
+}
+
+.reacts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .icon i{
+        margin: 5px;
+    }
 }
 /* side bars */
 #sider {
