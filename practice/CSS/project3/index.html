@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <div>
+        <div class="nav-img">
             <img src="https://dfdx9u0psdezh.cloudfront.net/logos/full-logo.webp" alt="" height="40px">
         </div>
         <div class="nav-links">
@@ -41,7 +41,11 @@
                     <h5>Become a job-ready software engineer with our Cohort 2.0. An intensive program
                         covering MERN stack development, DSA, and aptitude training.
                     </h5>
-                    <h1>Price <span>Rs.5999</span></h1>
+                    <div class="cut">
+                        <h1>Price <span>Rs.5999</span></h1>
+                        <p>Rs.11998 </p>
+                        <h6>(+GST)</h6>
+                    </div>
                 </div>
                 <div class="btn">
                     <button>Buy Now <i class="fa-solid fa-arrow-right"></i></button>
@@ -586,7 +590,7 @@
         <hr>
         <h1 class="gopi">Made with <i class="fa-solid fa-heart" style="color: red;"></i> by <span><a
                     href="https://www.linkedin.com/in/gopi-banjara/" class="hidden-link">@gopi</a>
-                </span></h1>
+            </span></h1>
     </main>
     <script>
         const text = document.querySelector(".text-fill");
@@ -602,6 +606,19 @@
             text.style.setProperty("--x", "-999px");
             text.style.setProperty("--y", "-999px");
         });
+
+        const SCROLL_SPEED_MULTIPLIER = 0.4;
+
+        window.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            const scrollDistance = event.deltaY * SCROLL_SPEED_MULTIPLIER;
+            window.scrollBy({
+                top: scrollDistance,
+                left: 0,
+                behavior: 'smooth' // Ensures the custom step feels fluid
+            });
+        }, { passive: false }); // 'passive: false' is required to allow event.preventDefault()
+
     </script>
 </body>
 
