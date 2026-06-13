@@ -534,6 +534,9 @@
         <!-- sheryians -->
 
         <h1 class="text-fill">Sheryians</h1>
+
+
+        
     </main>
     <script>
         const text = document.querySelector(".text-fill");
@@ -544,7 +547,7 @@
           text.style.setProperty("--x", `${e.clientX - rect.left}px`);
           text.style.setProperty("--y", `${e.clientY - rect.top}px`);
         });
-        
+
         text.addEventListener("mouseleave", () => {
           text.style.setProperty("--x", "-999px");
           text.style.setProperty("--y", "-999px");

@@ -656,7 +656,7 @@ hr{
   -webkit-text-stroke: 2px #333;
 
   background: radial-gradient(
-    circle 155px at var(--x, -999px) var(--y, -999px),
+    circle 200px at var(--x, -999px) var(--y, -999px),
     #ff6b35 0%,
     #c54d23 50%,
     transparent 100%
@@ -667,23 +667,3 @@ hr{
   -webkit-text-fill-color: transparent;
 }
 
-/* .text-fill:hover {
-  background-size: 100% 100%;
-} */
-
-@media (max-width:786px) {
-
-    .home,.user{
-        display: none;
-    }
-
-    .sign-in {
-        svg{
-        display: block;
-
-        i{
-            size: 100px;
-        }}
-    }
-
-}
