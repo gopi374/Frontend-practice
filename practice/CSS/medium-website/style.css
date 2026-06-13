@@ -22,7 +22,7 @@ body {
     width: 99vw;
     height: 99vh;
     overflow-x:hidden;
-     
+    scrollbar-width: none;
 }
 #nav {
   padding: 25px;
@@ -31,16 +31,27 @@ body {
   justify-content: space-between;
   background-color: #ffffff;
   grid-area: nav;
+  position: fixed;
+  width: 100vw;
+  /* background-color: rgb(244, 238, 75); */
+  
 }
 #content {
   border: 2px solid rgb(214, 213, 213);
   grid-area: content;
+    margin-top: 2.65%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+
 }
 #side {
   border-top: 2px solid rgb(214, 213, 213);
   grid-area: side;
+  margin-top: 11%;
 }
 #sider {
+  margin-top: 8.3%;
   border-top: 2px solid rgb(214, 213, 213);
   grid-area: side-r;
 }
@@ -307,8 +318,6 @@ hr{
     padding: 0px 10px;
     width: 20vw;
     display: block;
-    position: sticky;
-    top: 0;
     align-self: start;
     
     h2{
