@@ -1,3 +1,8 @@
+@font-face {
+    font-family: neo;
+    src: url(/practice/CSS/project3/NeueMachina-Regular.woff2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@
 
 html,
 body {
-    font-family: Manrope, sans-serif;
+    font-family: neo;
     width: 100%;
     height: 100%;
     background: #000;
@@ -49,6 +54,7 @@ h4 {
     cursor: pointer;
 
     h4:hover {
+        font-family: neo;
         color: orangered;
     }
 
