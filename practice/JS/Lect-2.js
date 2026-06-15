@@ -23,8 +23,8 @@ let arr1 = [0,1,5,true,arr,"first","array"];
 // arr.shift();
 // console.log(arr1);
 
-arr1.splice(4,1,"gopi","banjara","hello","world");
-console.log(arr1);
+// arr1.splice(4,1,"gopi","banjara","hello","world");
+// console.log(arr1);
 
 //object
 
@@ -32,9 +32,13 @@ let user = {
     name: "alice",
     age : 25,
     isStrudent : true,
+    "last name":"BorderLand",
     '':"Empty key",
     " ":"space key"//only accessible  console.log(user[''])
 }
 console.log(user);
+console.log(user.age)
 console.log(user.isStrudent) //.opt cannot access empty string  and space key (eg -> ''," ", last name)
 console.log(user['']) //square bracket can access empty string and key (eg -> ''," " ," last name");
+console.log(user[" "])
+console.log(user["name"],user["last name"])
