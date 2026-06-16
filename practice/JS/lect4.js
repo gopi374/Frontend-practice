@@ -26,30 +26,32 @@ let cart = [
 // let name = cart.map((c) => c["name"] + c.id);
 
 let name = cart.map((c) => ({
-    name:c.name,
-    price:c.price
-})
-);
+  name: c.name,
+  price: c.price,
+}));
 
 console.log(name);
 
-
-let wod = ["apple","girraffe","elephant","dog","cat"]
-let len = wod.filter((w)=>w.length>=5)
-console.log(len)
+let wod = ["apple", "girraffe", "elephant", "dog", "cat"];
+let len = wod.filter((w) => w.length >= 5);
+console.log(len);
 
 let ppl = [
-    {name:"A",age:12},
-    {name:"B",age:88},
-    {name:"B",age:42},
-    {name:"D",age:18},
-    {name:"E",age:15}
-]
-let ag = ppl.filter((p)=>p.age>=18,{
-    
-});
-let ac = ag.map((a)=>({
-    name:a.name,
-    age:a.age
-}));
-console.log(ac)
+  { name: "A", age: 12 },
+  { name: "B", age: 88 },
+  { name: "B", age: 42 },
+  { name: "D", age: 18 },
+  { name: "E", age: 15 },
+];
+// let ag = ppl.filter((p)=>p.age>=18);
+// let ac = ag.map((a)=>({
+//     name:a.name,
+//     age:a.age
+// }));
+let user = ppl
+  .filter((p) => p.age >= 18)
+  .map((p) => ({
+    name: p.name,
+    age: p.age,
+  }));
+console.log(user);
