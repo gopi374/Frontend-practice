@@ -1,16 +1,32 @@
+@font-face {
+    font-family: neo;
+    src: url(Gilroy-Light.ttf);
+}
+
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 html,body{
+    color: #000000;
+    font-family: neo;
     width: 100%;
     height: 100%;
-    color: wheat;
-    background-color: black;
+    padding: 50px;
 }
 main{
     margin: 5px;
-    background: rgb(64, 66, 68);
+}
+.h1{
+    font-size: 18vw;
+    /* font-weight: 800; */
+    color: transparent;
+    -webkit-text-stroke: .7px #333;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: anime 5s ease 1s infinite direction fill-mode;
 }
 nav{
     display: flex;
@@ -76,7 +92,6 @@ header h5{
 .but1{
     margin: 0px;
     position: absolute;
-    right: ;
     top: 341.5px;
 }
 .but2{

@@ -23,22 +23,94 @@ let arr1 = [0,1,5,true,arr,"first","array"];
 // arr.shift();
 // console.log(arr1);
 
-// arr1.splice(4,1,"gopi","banjara","hello","world");
+arr1.splice(4,0,"gopi","banjara","hello","world");
 // console.log(arr1);
 
 //object
 
-let user = {
-    name: "alice",
-    age : 25,
-    isStrudent : true,
-    "last name":"BorderLand",
-    '':"Empty key",
-    " ":"space key"//only accessible  console.log(user[''])
+// let user = {
+//     name: "alice",
+//     age : 25,
+//     isStrudent : true,
+//     "last name":"BorderLand",
+//     '':"Empty key",
+//     " ":"space key"//only accessible  console.log(user[''])
+// }   
+// console.log(user);
+// console.log(user.age)
+// console.log(user.isStrudent) //.opt cannot access empty string  and space key (eg -> ''," ", last name)
+// console.log(user['']) //square bracket can access empty string and key (eg -> ''," " ," last name");
+// console.log(user[" "])
+// console.log(user["name"],user["last name"])
+
+
+
+
+//function - a usable 
+
+function greet(name){ //function definition
+    // return "hello "+name; //old 
+    return `Hello, ${name}`; //template literals- external js variable is passed 
 }
-console.log(user);
-console.log(user.age)
-console.log(user.isStrudent) //.opt cannot access empty string  and space key (eg -> ''," ", last name)
-console.log(user['']) //square bracket can access empty string and key (eg -> ''," " ," last name");
-console.log(user[" "])
-console.log(user["name"],user["last name"])
+console.log(greet("ankit"))
+//expression function - anonymous function
+g = function(){
+    return "hello"
+};
+
+
+console.log(typeof(g))
+
+
+//arrow function
+const msg = (name)=>{
+    return "hello world "+name;
+}
+console.log(msg("hlep"))
+
+let add = (a,b)=>{
+    return a+b;
+}
+console.log(add(5,8))
+
+let str=(stri)=>{
+    return stri.toUpperCase();
+}
+console.log(str("hekkkoo"))
+
+let ar=[1,2,5,3,9,6,3];
+let sum = (arr)=>{
+    let s=0;
+    for(let i=0;i<ar.length;i++){
+        s+=ar[i];
+    }
+   return s;
+}
+
+console.log(sum(ar))
+
+
+let obj={
+    name:"gopi",
+    age:45,
+    cat:function(){
+        return "Meooow"
+    }
+}
+obj.newname="Ankit"
+obj.grade=8;
+obj.gt=greet("gopi");
+obj.arrrr=ar;
+obj["file type"]="audio"
+obj['position']="relative"
+console.log(obj)
+
+
+//higher order function
+// An 
+let execure=function(msg){
+    console.log("greeting")
+    console.log(msg("gopi"));
+}
+
+execure(msg);
