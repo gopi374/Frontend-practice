@@ -855,3 +855,47 @@ footer {
 .gopi:hover .hidden-link {
     text-decoration: underline;
 }
+
+/* responsive */
+
+@media (max-width:700px) {
+    nav{
+        width: 8vw;
+
+        .nav-links{
+            display: none;
+        }
+    }
+    .hero{
+        margin: 0;
+        padding: 0%;
+        height: 160vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .hero-txt{
+            margin: 0;
+            padding: 0%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .txt{
+                
+            }
+            .btn{
+            margin: 0;
+            padding: 0%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            }
+        }
+        .hero-card{
+
+            margin: 0;
+            padding: 0%;
+        }
+    }
+}
