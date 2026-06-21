@@ -6,11 +6,11 @@
 
 let name = "Alice";
 
-function greet() {
+function greet1() {
     console.log(name);
 }
 
-greet(); // Alice
+greet1(); // Alice
 
 
 //Function Scope - Variables declared with var inside a function are accessible only within that function.
@@ -50,3 +50,26 @@ console.log(a)
 // console.log(b) //ReferenceError: Cannot access 'b' before initialization , it works  for const and let 
 const  b = 4;
 console.log(b)
+
+
+//funstion hoisting
+//fully hoisted
+dance();
+function dance(){
+    console.log("dancing")
+}
+
+//Not hoisted
+// abs();  //error - TypeError: abs is not a function
+var abs = function(){
+    console.log("absolute value")
+}
+
+abs();
+
+// greet();   // error - ReferenceError: Cannot access 'greet' before initialization
+
+const greet = () => {
+    console.log("Hello");
+};
+
