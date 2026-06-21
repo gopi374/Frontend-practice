@@ -69,7 +69,32 @@ abs();
 
 // greet();   // error - ReferenceError: Cannot access 'greet' before initialization
 
-const greet = () => {
-    console.log("Hello");
-};
+// const greet = () => {
+//     console.log("Hello");
+// };
 
+
+
+//callbacks - A callback is a function that is passed as an argument to another function and is executed later.
+function greet(name) {
+    console.log("Hello " + name);
+}
+
+function processUser(callback) {
+    const name = "John";
+    callback(name);
+}
+
+console.log(processUser(greet("john")))
+
+//Destructuring in JavaScript is a syntax that allows you to extract values from arrays or objects and assign them to variables in a concise way.
+
+//Array Destructuring
+//Basic Example
+const numbers = [10, 20, 30];
+
+const [a, b, c] = numbers;
+
+console.log(a); // 10
+console.log(b); // 20
+console.log(c); // 30
