@@ -82,7 +82,7 @@ function greet(name) {
 
 function processUser(callback) {
     const name = "John";
-    callback(name);
+    greet(name);
 }
 
 console.log(processUser(greet("john")))
@@ -91,10 +91,8 @@ console.log(processUser(greet("john")))
 
 //Array Destructuring
 //Basic Example
-const numbers = [10, 20, 30];
+const numbers = [10, 20, 30, 65, 25, 12];
 
-const [a, b, c] = numbers;
+let [n, f = 50, c, , d] = numbers;
 
-console.log(a); // 10
-console.log(b); // 20
-console.log(c); // 30
+console.log(n, f, c, d);
