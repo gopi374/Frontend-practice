@@ -1,3 +1,5 @@
+// setTimeout() - method schedules a callback function to execute once after a specified time delay.
+// setInterval() - Repeats continuously at every interval.
 function wait(){
     // let time = new Date().getTime();
     // while(new Date().getTime()<time+5000){}
@@ -16,9 +18,36 @@ function wait(){
 
 }
 
+// let stop=setTimeout(() =>{
+//      console.log('immidiate stop')
+// })
+// console.log(clearTimeout(stop))
 
-console.log('hlello')
-wait();
-console.log("worldd")
+// console.log('hlello')
+// wait();
+// console.log("worldd")
 
 // console.log(new Date().getMinutes())
+
+
+
+let c = 0;
+const i = setInterval(()=>{
+    c++;
+    console.log(c);
+    if(c==3){
+        clearInterval(i);
+    }
+},10000)
+
+setTimeout(() => {
+    console.log('timeout')
+}, 2500); 
+
+
+//imp interview Q/A
+for(let i=1;i<4;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },i*1000)
+}
