@@ -48,7 +48,7 @@ function compressed(profileimg,cb){
     let cimg = profileimg.split('.')[0]+".webp";
     console.log('img converting...')
     setTimeout(()=>{
-        console.log(`img converted successfully - ${cimg}`)
+        console.log("img converted successfully - ",cimg)
         cb(cimg);
     },3000)
 
