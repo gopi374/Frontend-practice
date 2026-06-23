@@ -37,9 +37,9 @@ let url="https://ankit.com/images/profile.jpg"
 
 function download(url,cb){
     let profileimg=url.split('/')[4];
-    console.log('img downloading..')
+    console.log(`img downloading from - ${url}`)
     setTimeout(()=>{
-        console.log('img downloaded !!!')
+        console.log(`img downloaded - ${profileimg}`)
         cb(profileimg,upload);
     },2000)
 };
@@ -48,18 +48,17 @@ function compressed(profileimg,cb){
     let cimg = profileimg.split('.')[0]+".webp";
     console.log('img converting...')
     setTimeout(()=>{
-        console.log('img converted successfully !!!')
-        cb();
+        console.log(`img converted successfully - ${cimg}`)
+        cb(cimg);
     },3000)
 
 }
 function upload(cimg){
     let nURL = "https://newurl.com/images/"+cimg;
-    console.log('uplaoding new image...')
+    console.log(`uploading img to new url - ${nURL}`)
     setTimeout(()=>{
         console.log('uplaod successfull !!')
     },4000)
 }
-
 
 download(url,compressed);
