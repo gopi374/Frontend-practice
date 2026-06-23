@@ -44,15 +44,15 @@ function download(url,cb){
     },2000)
 };
 
-function compressed(profileimg,cb){
-    let cimg = profileimg.split('.')[0]+".webp";
-    console.log('img converting...')
-    setTimeout(()=>{
-        console.log("img converted successfully - ",cimg)
-        cb(cimg);
-    },3000)
+// function compressed(profileimg,cb){
+//     let cimg = profileimg.split('.')[0]+".webp";
+//     console.log('img converting...')
+//     setTimeout(()=>{
+//         console.log("img converted successfully - ",cimg)
+//         cb(cimg);
+//     },3000)
 
-}
+// }
 function upload(cimg){
     let nURL = "https://newurl.com/images/"+cimg;
     console.log(`uploading img to new url - ${nURL}`)
@@ -61,4 +61,12 @@ function upload(cimg){
     },4000)
 }
 
-download(url,compressed);
+download(url,(profileimg,cb)=>{
+    let cimg = profileimg.split('.')[0]+".webp";
+    console.log('img converting...')
+    setTimeout(()=>{
+        console.log("img converted successfully - ",cimg)
+        cb(cimg);
+    },3000)
+
+});
