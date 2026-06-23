@@ -50,4 +50,13 @@ for(let i=1;i<4;i++){
     setTimeout(()=>{
         console.log(i)
     },i*1000)
-}
+} //o/p-1 2 3
+
+for(var i=1;i<4;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },i*1000)
+} // o/p - 4 4 4
+
+// because fo scoping - var is function & global scope , it points to single i=4;
+// let is block scope , it points different i with every timeout -1 2 3 
