@@ -31,4 +31,35 @@ function maggiekhana(){
 //     });
 // });
 
-maggielana(maggiebanana);
+// maggielana(maggiebanana);
+
+let url="https://ankit.com/images/profile.jpg"
+
+function download(url,cb){
+    let profileimg=url.split('/')[4];
+    console.log('img downloading..')
+    setTimeout(()=>{
+        console.log('img downloaded !!!')
+        cb(profileimg,upload);
+    },2000)
+};
+
+function compressed(profileimg,cb){
+    let cimg = profileimg.split('.')[0]+".webp";
+    console.log('img converting...')
+    setTimeout(()=>{
+        console.log('img converted successfully !!!')
+        cb();
+    },3000)
+
+}
+function upload(cimg){
+    let nURL = "https://newurl.com/images/"+cimg;
+    console.log('uplaoding new image...')
+    setTimeout(()=>{
+        console.log('uplaod successfull !!')
+    },4000)
+}
+
+
+download(url,compressed);
