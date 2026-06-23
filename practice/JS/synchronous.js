@@ -46,6 +46,8 @@ function wait(){
 
 
 //imp interview Q/A
+
+//Q=1
 // for(let i=1;i<4;i++){
 //     setTimeout(()=>{
 //         console.log(i)
@@ -62,7 +64,7 @@ function wait(){
 // let is block scope , it points different i with every timeout -1 2 3 
 
 
-
+//Q=2
 let count = 3;
 const counter = setInterval(() => {
     if(count>0){
