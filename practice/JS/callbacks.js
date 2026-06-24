@@ -61,12 +61,55 @@ function upload(cimg){
     },4000)
 }
 
-download(url,(profileimg,cb)=>{
-    let cimg = profileimg.split('.')[0]+".webp";
-    console.log('img converting...')
-    setTimeout(()=>{
-        console.log("img converted successfully - ",cimg)
-        cb(cimg);
-    },3000)
+// download(url,(profileimg,cb)=>{
+//     let cimg = profileimg.split('.')[0]+".webp";
+//     console.log('img converting...')
+//     setTimeout(()=>{
+//         console.log("img converted successfully - ",cimg)
+//         cb(cimg);
+//     },3000)
 
-});
+// });
+
+//Q=3
+
+function orderplaced(cb){
+    console.log("order aaya he...")
+    setTimeout(()=>{
+        console.log("ingredients lene jaa rha hu...")
+        cb(deliever);
+    },2000)
+}
+
+function prepared(cb){
+    console.log("sabzi preparing...")
+    setTimeout(() => {
+        console.log("sabzi ban gyi...")
+        cb();
+    }, 2000);
+}
+function deliever(cb){
+    console.log("deleivry wala aagya..")
+    setTimeout(() => {
+        console.log("delivery wala order le gya...")
+    }, 1000);
+    setTimeout(()=>{
+        console.log("traffic bahuut he")
+    },2000)
+    setTimeout(()=>{
+        console.log("deleiver ho gya")
+        cb();
+    },4000)
+}
+
+//easy methods to call callbacks
+orderplaced(()=>{
+    prepared(()=>{
+        deliever(()=>{
+            setTimeout(() => {
+                console.log("Enjoy your meal !💓")
+            }, 1000);
+        })
+    })
+})
+// orderplaced(prepared);
