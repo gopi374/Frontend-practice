@@ -63,23 +63,125 @@ function greet() {
 // greet()();
 
 //check even or odd
-function checkeven(num) {
-  return new Promise((res, rej) => {
-    if (num % 2 == 0) {
-      res();
-    } else {
-      rej();
-    }
+// function checkeven(num) {
+//   return new Promise((res, rej) => {
+//     if (num % 2 == 0) {
+//       res();
+//     } else {
+//       rej();
+//     }
+//   });
+// }
+
+// checkeven(15)
+//   .then(() => {
+//     console.log("even");
+//   })
+//   .catch(() => {
+//     console.log("odd");
+//   })
+//   .finally(() => {
+//     console.log("check confirm");
+//   });
+
+//ATM widrawl
+
+// function ATM(amount, balance) {
+  // return new Promise((res, rej) => {
+//     console.log("fetching balance...");
+//     setTimeout(() => {
+//       let succes = "amount withdrawl sucessfully !!";
+//       let failed = "insufficient balance";
+//       if (balance > amount) {
+//         res(succes);
+//       } else {
+//         rej(failed);
+//       }
+//     }, 2000);
+//   });
+// }
+// ATM(1500, 1600)
+//   .then((succes) => {
+//     console.log(succes);
+//   })
+//   .catch((failed) => {
+//     console.log(failed);
+//   });
+
+function maggielana(){
+    return new Promise((res, rej) => {
+    console.log("maggie lene gye ...")
+    setTimeout(()=>{
+        console.log("maggie aa gyi...")
+        res();
+    },2000)
   });
 }
 
-checkeven(15)
-  .then(() => {
-    console.log("even");
-  })
-  .catch(() => {
-    console.log("odd");
-  })
-  .finally(() => {
-    console.log("check confirm");
+
+function maggiebanana(){
+    return new Promise((res, rej) => {
+    console.log("maggie banana start ...")
+    setTimeout(()=>{
+        console.log("maggie ban gyi...")
+        res();
+    },2000)
+    });
+}
+
+function maggiekhana(){
+    return new Promise((res, rej) => {
+    console.log("maggie khana start ...")
+    setTimeout(()=>{
+        console.log("maggie khatam...")
+        res();
+    },2000)
   });
+}
+
+
+// maggielana()
+//    .then(()=>maggiebanana())
+//    .then(()=> maggiekhana())
+//    .then(()=>{console.log("wash utensils...")})
+
+function orderplaced(){
+    return new Promise((res) => {
+    console.log("order aaya he...")
+    setTimeout(()=>{
+        console.log("ingredients lene jaa rha hu...")
+        res();
+    },2000)
+  });
+}
+
+function prepared(){
+    return new Promise((res) => {
+    console.log("sabzi preparing...")
+    setTimeout(() => {
+        console.log("sabzi ban gyi...")
+        res();
+    }, 2000);
+  });
+}
+function deliever(){
+    return new Promise((res) => {
+    console.log("deleivry wala aagya..")
+    setTimeout(() => {
+        console.log("delivery wala order le gya...")
+    }, 1000);
+    setTimeout(()=>{
+        console.log("traffic bahuut he")
+    },2000)
+    setTimeout(()=>{
+        console.log("deleiver ho gya")
+        res();
+    },4000)
+  });
+}
+
+orderplaced()
+  // .then(prepared) -- without arrow function we can't send and recieve the data
+  // .then(deliever)
+  .then(()=>prepared())
+  .then(() => deliever())
