@@ -180,8 +180,52 @@ function deliever(){
   });
 }
 
-orderplaced()
-  // .then(prepared) -- without arrow function we can't send and recieve the data
-  // .then(deliever)
-  .then(()=>prepared())
-  .then(() => deliever())
+// orderplaced()
+//   // .then(prepared) -- without arrow function we can't send and recieve the data
+//   // .then(deliever)
+//   .then(()=>prepared())
+//   .then(() => deliever())
+
+
+
+let url="https://ankit.com/images/profile.jpg"
+
+function download(url){
+  return new Promise((res) => {
+
+    let profileimg=url.split('/')[4];
+    console.log(`img downloading from - ${url}`)
+    setTimeout(()=>{
+        console.log(`img downloaded - ${profileimg}`)
+        res(profileimg);
+    },2000)
+  });
+};
+
+function compressed(profileimg){
+    return new Promise((res) => {
+    let cimg = profileimg.split('.')[0]+".webp";
+    console.log('img converting...')
+    setTimeout(()=>{
+        console.log("img converted successfully - ",cimg)
+        res(cimg);
+    },3000)
+  });
+
+}
+function upload(cimg){
+    return new Promise((res) => {
+    let nURL = "https://newurl.com/images/"+cimg;
+    console.log(`uploading img to new url - ${nURL}`)
+    setTimeout(()=>{
+        console.log('uplaod successfull !!')
+        res();
+    },4000)
+  });
+}
+
+
+download(url)
+   .then((profileimg)=> compressed(profileimg))
+   .then((cimg)=>upload(cimg))
+
