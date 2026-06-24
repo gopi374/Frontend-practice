@@ -229,3 +229,11 @@ download(url)
    .then((profileimg)=> compressed(profileimg))
    .then((cimg)=>upload(cimg))
 
+
+
+   // Q = implement an  traffic light sequence (Red -> Yellow -> Green) using promises
+
+
+   function Red(){
+    
+   }
