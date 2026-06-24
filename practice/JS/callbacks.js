@@ -105,6 +105,7 @@ function deliever(cb){
 //easy methods to call callbacks
 // callback hell
 // pyramid of Doom
+
 orderplaced(()=>{
     prepared(()=>{
         deliever(()=>{
