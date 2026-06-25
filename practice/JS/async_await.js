@@ -75,4 +75,91 @@ async function da(){
     console.log(val2)
     console.log('world2')
 }
-da()
+// da()
+
+
+function orderplaced(){
+    return new Promise((res) => {
+    console.log("order aaya he...")
+    setTimeout(()=>{
+        console.log("ingredients lene jaa rha hu...")
+        res();
+    },2000)
+  });
+}
+
+function prepared(){
+    return new Promise((res) => {
+    console.log("sabzi preparing...")
+    setTimeout(() => {
+        console.log("sabzi ban gyi...")
+        res();
+    }, 2000);
+  });
+}
+function deliever(){
+    return new Promise((res) => {
+    console.log("deleivry wala aagya..")
+    setTimeout(() => {
+        console.log("delivery wala order le gya...")
+    }, 1000);
+    setTimeout(()=>{
+        console.log("traffic bahuut he")
+    },2000)
+    setTimeout(()=>{
+        console.log("deleiver ho gya")
+        res();
+    },4000)
+  });
+}
+
+async function getorder(){
+    await orderplaced();
+    await prepared();
+    await deliever();
+}
+
+
+// getorder()
+
+let url="https://ankit.com/images/profile.jpg"
+
+function download(url){
+  return new Promise((res) => {
+
+    console.log(`img downloading from - ${url}`)
+    setTimeout(()=>{
+        let profileimg=url.split('/')[4];
+        console.log(`img downloaded - ${profileimg}`)
+        res(profileimg);
+    },2000)
+  });
+};
+
+function compressed(profileimg){
+    return new Promise((res) => {
+        console.log('img converting...')
+        setTimeout(()=>{
+        let cimg = profileimg.split('.')[0]+".webp";
+        console.log("img converted successfully - ",cimg)
+        res(cimg);
+    },3000)
+  });
+
+}
+function upload(cimg){
+    return new Promise((res) => {
+        let nURL = "https://newurl.com/images/"+cimg;
+        setTimeout(()=>{
+        console.log(`uploading img to new url - ${nURL}`)
+        console.log('uplaod successfull !!')
+        res(nURL);
+    },4000)
+  });
+}
+async function getdownload(){
+    const a = await download(url);
+    const b =await compressed(a);
+    const c = await upload(b);
+}
+getdownload()
