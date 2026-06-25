@@ -225,15 +225,45 @@ function upload(cimg){
 }
 
 
-download(url)
-   .then((profileimg)=> compressed(profileimg))
-   .then((cimg)=>upload(cimg))
+// download(url)
+//    .then((profileimg)=> compressed(profileimg))
+//    .then((cimg)=>upload(cimg))
 
 
 
    // Q = implement an  traffic light sequence (Red -> Yellow -> Green) using promises
 
 
-   function Red(){
-    
+   function Red() {
+     return new Promise((res) => {
+       console.log("Signal is Red 🚫");
+       setTimeout(() => {
+         res();
+       }, 3000);
+     });
    }
+
+function Yellow(){
+        return new Promise((res) => {
+          console.log('Signal is Yellow ,Ready to gOO!!🟡');
+          setTimeout(()=>{
+            res();
+          },2000)
+        });
+   }
+
+function Green(){
+        return new Promise((res) => {
+          console.log('Gooo !!!➡️');
+          setTimeout(()=>{
+            res();
+          },1000)
+        });
+   }
+
+Red()
+  .then(()=>Yellow())
+  .then(()=>Green())
+  .then(()=>{
+    console.log("you are at Home !!")
+  })
