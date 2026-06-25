@@ -139,11 +139,11 @@ function maggiekhana(){
   });
 }
 
-
+//PROMISE CHAINING  
 // maggielana()
 //    .then(()=>maggiebanana())
 //    .then(()=> maggiekhana())
-//    .then(()=>{console.log("wash utensils...")})
+//    .then(()=>{console.log("wash utensils...")}) 
 
 function orderplaced(){
     return new Promise((res) => {
