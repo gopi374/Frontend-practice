@@ -248,7 +248,7 @@ function Yellow(){
           console.log('Signal is Yellow ,Ready to gOO!!🟡');
           setTimeout(()=>{
             res();
-          },2000)
+          },3000)
         });
    }
 
