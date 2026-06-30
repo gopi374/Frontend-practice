@@ -27,4 +27,5 @@ class Student{
 }
 const std1=new Student("Gopi",50);
 Student.greet();
+// std1.greet()  is not function()
 std1.ispresent();
