@@ -1,6 +1,8 @@
 //scoping & hoisting
 //scope -Scope determines where a variable or function can be accessed.
 
+const { Children } = require("react");
+
 //Global Scope
 //Variables declared outside any function or block are globally accessible.
 
@@ -96,3 +98,17 @@ const numbers = [10, 20, 30, 65, 25, 12];
 let [n, f = 50, c, , d] = numbers;
 
 console.log(n, f, c, d);
+
+let obj = {
+    naam:"gopi",
+    age: 28,
+    marks: 56,
+    class : "object",
+    time:"4,220"
+}
+let {naam,age ,...obj1}=obj;
+console.log(naam)
+console.log(obj1)
+
+console.log(Object.keys(obj))
+console.log(Object.values(obj))
