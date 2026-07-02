@@ -21,8 +21,17 @@ let arr = [
     "manosh",
     "gopi"
 ]
+const ul = document.querySelector(".movie")
+
 for(let item of arr){
-    movielist.innerHTML+=`<li class="movies">${item}</li>`
+    //way 1 - it will works as same , but the time complexity O(N) means due to string is immutable in js , browser recreate the siblings of the element
+    // movielist.innerHTML+=`<li class="movies">${item}</li>`
+
+    //way 2 -  O(1) because it will do 1 recreate or changes
+    const li = document.createElement("li");
+    li.innerText=`${item}`
+    ul.appendChild(li);
+
 }
 const movie = document.querySelectorAll('.movies');
 console.log(movie)

@@ -86,27 +86,27 @@ function greet() {
 
 //ATM widrawl
 
-// function ATM(amount, balance) {
-  // return new Promise((res, rej) => {
-//     console.log("fetching balance...");
-//     setTimeout(() => {
-//       let succes = "amount withdrawl sucessfully !!";
-//       let failed = "insufficient balance";
-//       if (balance > amount) {
-//         res(succes);
-//       } else {
-//         rej(failed);
-//       }
-//     }, 2000);
-//   });
-// }
-// ATM(1500, 1600)
-//   .then((succes) => {
-//     console.log(succes);
-//   })
-//   .catch((failed) => {
-//     console.log(failed);
-//   });
+function ATM(amount, balance) {
+  return new Promise((res, rej) => {
+    console.log("fetching balance...");
+    setTimeout(() => {
+      let succes = "amount withdrawl sucessfully !!";
+      let failed = "insufficient balance";
+      if (balance > amount) {
+        res(succes);
+      } else {
+        rej(failed);
+      }
+    }, 2000);
+  });
+}
+ATM(1500, 1600)
+  .then((succes) => {
+    console.log(succes);
+  })
+  .catch((failed) => {
+    console.log(failed);
+  });
 
 function maggielana(){
     return new Promise((res, rej) => {
@@ -261,9 +261,9 @@ function Green(){
         });
    }
 
-Red()
-  .then(()=>Yellow())
-  .then(()=>Green())
-  .then(()=>{
-    console.log("you are at Home !!")
-  })
+// Red()
+//   .then(()=>Yellow())
+//   .then(()=>Green())
+//   .then(()=>{
+//     console.log("you are at Home !!")
+//   })
