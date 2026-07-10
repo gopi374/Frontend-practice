@@ -15,8 +15,4 @@ btn.addEventListener("click", () => {
         ul.appendChild(li);
       });
     })
-    .catch((err) => {
-      console.error(err);
-      ul.innerHTML = "<li>Error loading data</li>";
-    });
 });
