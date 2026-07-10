@@ -9,7 +9,7 @@ btn.addEventListener("click", () => {
     .then((data) => {
       ul.innerHTML = "";
       // show first 10 items
-      data.slice(0, 10).forEach((item) => {
+      data.slice(0, 5).forEach((item) => {
         const li = document.createElement("li");
         li.textContent = `${item.id}. ${item.title} [${item.completed ? "done" : "todo"}]`;
         ul.appendChild(li);
