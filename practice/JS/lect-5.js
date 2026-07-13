@@ -44,44 +44,53 @@ let user = bankAcc(200);
 // user.withdraw(1.38333333);
 // user.checkbal();
 
-function counter(value){
-    let val = value;
-    return{
-        increment(){
-            console.log(val++)
-        },
-        decrement(){
-            console.log(val--)
-        },
-
+function counter(value) {
+  let val = value;
+  return {
+    increment() {
+      val++;
+      console.log(val);
+    },
+    decrement() {
+      val--;
+      console.log(val);
     }
+  };
 }
 
-function  vendingMachine(){
-    let insert
-   
+let ct = counter(0);
+ct.increment()
+ct.increment()
+ct.decrement()
 
-    return{
-        getSoda(val){
-            initialSoda-=val;
-            console.log(`Here is your Can !! , Remaining Cans - ${initialSoda}`)
-        },
-        getCoffee(countity){
-            initialCoffee-=countity;
-            console.log(`here is Your coffee !! , Remaining coffee - ${initialCoffee}`)
-        },
-        getChocolate(countity){
-            initialChocolate-=countity;
-            console.log(`here is Your chocolate !! , Remaining coffee - ${initialChocolate}`)
-        },
-        getInventory(){
-            console.log(`Remaining Coffees - ${initialCoffee}`)
-            console.log(`Remaining Chocolates - ${initialChocolate}`)
-            console.log(`Remaining Soda - ${initialSoda}`)
-        }
-    }
-}
+// function vendingMachine() {
+//   let insert;
 
-let grocerry = vendingMachine(15,12,10)
-grocerry.getChocolate(2)
-grocerry.getInventory()
+//   return {
+//     getSoda(val) {
+//       initialSoda -= val;
+//       console.log(`Here is your Can !! , Remaining Cans - ${initialSoda}`);
+//     },
+//     getCoffee(countity) {
+//       initialCoffee -= countity;
+//       console.log(
+//         `here is Your coffee !! , Remaining coffee - ${initialCoffee}`,
+//       );
+//     },
+//     getChocolate(countity) {
+//       initialChocolate -= countity;
+//       console.log(
+//         `here is Your chocolate !! , Remaining coffee - ${initialChocolate}`,
+//       );
+//     },
+//     getInventory() {
+//       console.log(`Remaining Coffees - ${initialCoffee}`);
+//       console.log(`Remaining Chocolates - ${initialChocolate}`);
+//       console.log(`Remaining Soda - ${initialSoda}`);
+//     },
+//   };
+// }
+
+// let grocerry = vendingMachine(15, 12, 10);
+// grocerry.getChocolate(2);
+// grocerry.getInventory();

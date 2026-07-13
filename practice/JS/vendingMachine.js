@@ -1,4 +1,4 @@
-// Vending Machine
+// Vending Machine -- closures
 
 function vendingMachine(){
     let insertedvalue=0;
@@ -27,11 +27,15 @@ function vendingMachine(){
                 }
             }
 
+        },
+        totalCoins(){
+            console.log(`Total coins Remains : ${insertedvalue}`);
         }
 
     }
 }
 
 let user = vendingMachine();
-user.insertcoin(11.12563);
+user.insertcoin(124);
 user.buyItem("chips");
+user.totalCoins();

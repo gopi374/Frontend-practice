@@ -106,9 +106,9 @@ let obj = {
     class : "object",
     time:"4,220"
 }
-let {naam,age ,...obj1}=obj;
+let {naam,...obj1}=obj;
 console.log(naam)
 console.log(obj1)
 
-console.log(Object.keys(obj))
-console.log(Object.values(obj))
+// console.log(Object.keys(obj))
+// console.log(Object.values(obj))
