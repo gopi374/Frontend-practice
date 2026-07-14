@@ -1,3 +1,5 @@
+/*
+
 //Data Structures (string , array  & objects)
 //string -is a sequence of charactors used to represent text they are immumatable and zero based indexing
 
@@ -111,3 +113,136 @@ function createGreeting(greetingWord) {
 }
 const sayHi = createGreeting("Hi");
 sayHi("Alice"); // Outputs: Hi, Alice
+
+
+*/
+
+//<-- Sysnchronous and Asynchronous -->
+
+//Synchronous: Code is executed line by line, from top to bottom. If one line of code takes a
+//long time (like a huge calculation), it "blocks" the rest of the code from running until it finishes
+
+/*
+
+Asynchronous (Async):
+
+Starts a task (like fetching data) and doesn't wait for it to finish.
+Other code continues running while the task completes in the background.
+Prevents the application from freezing.
+
+Example:
+
+Sync: Standing in a queue until your turn.
+Async: Ordering food and chatting while waiting for it.
+2. Timers: setTimeout() and setInterval()
+
+These are JavaScript functions used to schedule code execution.
+
+setTimeout() → Runs code once after a specified delay.
+setInterval() → Runs code repeatedly after every specified interval until stopped with clearInterval().
+
+Example:
+
+setTimeout(() => {
+  console.log("Runs once after 2 seconds");
+}, 2000);
+
+const id = setInterval(() => {
+  console.log("Runs every second");
+}, 1000);
+
+// Stop it
+clearInterval(id);
+
+
+3. Callbacks & Sequential Execution
+
+A callback is a function passed to another function and executed after a task finishes.
+
+Used to perform asynchronous operations in order.
+Too many nested callbacks create Callback Hell, making code difficult to read.
+
+Example:
+
+stepOne(() => {
+  stepTwo(() => {
+    stepThree();
+  });
+});
+
+
+4. Promises
+
+A Promise is an object that represents the future result of an asynchronous operation.
+
+A promise has three states:
+
+Pending – Waiting for completion.
+Resolved (Fulfilled) – Task completed successfully.
+Rejected – Task failed.
+
+Use:
+
+.then() for success.
+.catch() for errors.
+
+Example:
+
+fetchData()
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+*/
+
+function checkLogin() {
+  return new Promise((resolve, reject) => {
+    let login = true;
+
+    if (login) {
+      resolve("Login successful");
+    } else {
+      reject("Login failed");
+    }
+  });
+}
+
+async function loginUser() {
+  try {
+    let message = await checkLogin();
+    console.log(message);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+loginUser();
+
+
+
+function taskOne() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            console.log("Task 1 completed");
+            resolve();
+        }, 1000);
+    });
+}
+
+function taskTwo() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            let t = "Task 2 completed";
+            resolve(t);
+        }, 1000);
+    });
+}
+
+async function runTasks() {
+    await taskOne(); 
+    let a = await taskTwo();
+    console.log(a)
+
+    console.log("All tasks completed");
+}
+
+runTasks();
