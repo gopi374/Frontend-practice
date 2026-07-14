@@ -1,28 +1,15 @@
-let url = "https://jsonplaceholder.typicode.com/todos";
+const xhr = new XMLHttpRequest();
 
-const ul = document.querySelector("#list");
-const btn = document.querySelector("#btn");
+xhr.open(
+  "GET",
+  "https://jsonplaceholder.typicode.com/users/1"
+);
 
-function addTaskToList(data) {
-  for (let i = 0; i < data.length; i++) {
-    const li = document.createElement("li");
-    li.innerText = data[i].title;
-    ul.appendChild(li);
-  }
-}
+xhr.onload = function() {
+  const user = JSON.parse(xhr.responseText);
 
-let xhr = new XMLHttpRequest();
-xhr.open("GET", url);
-
-btn.addEventListener("click", () => {
-  xhr.send();
-});
-
-xhr.onload = (data) => {
-  data = data.target.response;
-  addTaskToList(JSON.parse(data));
+  document.getElementById("data").innerHTML =
+    "Name Recieved from API By XHR(): "+"<br>"+user.name;
 };
 
-xhr.onerror = (err) => {
-  console.log(err);
-};
+xhr.send();
