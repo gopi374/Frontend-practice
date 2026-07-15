@@ -1,12 +1,32 @@
 const express = require("express")
-
 const {createUser,getStudents,getStudentsByID,getStudentsByName,UpdateDataUsingID,updateDatafield,deleteUser} = require("./controllers/students/studentControllers")
 
+//mongodb
+// const { MongoClient } = require('mongodb');
+
+// const url = 'mongodb://localhost:27017';
+// const client = new MongoClient(url);
+
+
+
+
+//router
+const student_routes = require("./routes/student_routes")
+
+//middle ware
 const app = express();
+
+app.use("/students",student_routes);
+
 
 app.use(express.urlencoded())
 
 app.get("/",getStudents);
+
+app.use("/", (req, res, next) => {
+  console.log("Middleware Called !");
+  next();
+});
 
 app.get("/:id",getStudentsByID)
 
