@@ -1,35 +1,25 @@
 const express = require("express");
 
+const {getdata,createTODO} = require("./controllers/dailyTODO/dailytd")
+
+const cors = require('cors');
+
+const daily_router = require("./routes/daily_route")
 
 const app = express();
+
+
+// middleware
 app.use(express.urlencoded());
+app.use(express.json())
 
-let id = 1;
-let todo = [];
- 
-let priority = 0;
+//it allow sending or recieving request from client to server
+app.use(cors());
+app.use("/t",daily_router);
 
-app.get("/todos",(req,res)=>{
-    res.status(200).json({
-        message:"todos",
-        todos : todo,
-    })
-})
+app.get("/",getdata);
 
-app.post("/todos",(req,res)=>{
-    const task = req.body.name;
-    
-    const obj = {
-        id : id++,
-        Task : task
-    }
-    todo.push(obj);
-    res.status(201).json({
-        message:"TODO Created !!",
-        NewTODO : obj,
-    });
-})
-
+app.post("/todos",createTODO);
 
 app.listen(4000,()=>{
     console.log("🚀 Server is Running on PORT :4000")
