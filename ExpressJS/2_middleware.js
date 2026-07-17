@@ -38,4 +38,6 @@ app.get("/dashboard", checkAuth, (req, res) => {
   res.send("Welcome to your secret dashboard.");
 });
 
-app.listen(4000);
+app.listen(4000,()=>{
+  console.log(`🚀 Server is Running on PORT: 4000`)
+});
