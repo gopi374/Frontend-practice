@@ -1,6 +1,6 @@
 const express = require("express");
 
-const {getdata,createTODO} = require("./controllers/dailyTODO/dailytd")
+const {getdata,createTODO,deleteTodo,updateTodo,updateTodosField} = require("./controllers/dailyTODO/dailytd")
 
 const cors = require('cors');
 
@@ -20,6 +20,12 @@ app.use("/t",daily_router);
 app.get("/",getdata);
 
 app.post("/todos",createTODO);
+
+app.delete("/todos/:id",deleteTodo);
+
+app.put("/todos/:id",updateTodo);
+
+app.patch("/todos/:id",updateTodosField);
 
 app.listen(4000,()=>{
     console.log("🚀 Server is Running on PORT :4000")

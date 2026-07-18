@@ -1,15 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO</title>
+    <title>TODO App</title>
+
     <script defer src="index.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            
+            width: 400px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #4facfe;
+        }
+
+        button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        #btn {
+            background: #28a745;
+            color: white;
+        }
+
+        #btn:hover {
+            background: #218838;
+        }
+
+        #btnf {
+            width: 100%;
+            margin-top: 10px;
+            background: #007bff;
+            color: white;
+        }
+
+        #btnf:hover {
+            background: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        li {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: #f4f4f4;
+            border-left: 5px solid #4facfe;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:hover {
+            background: #e9ecef;
+        }
+
+        .empty {
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+        }
+        .cont{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont input{
+            margin-top: 15px;
+        }
+
+        .update {
+            margin: 0;
+            padding: 0;
+        }
+        .b{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    </style>
 </head>
+
 <body>
-    <input type="text" name="" id="inp" placeholder="Enter task to add">
-    <ul id="ul"></ul>
-    <button id="btn">click me</button>
+
+    <div class="container">
+
+        <h1>📝 TODO App</h1>
+
+        <div class="input-box">
+            <input type="text" id="inp" placeholder="Enter a new task...">
+
+            <button id="btn">+</button>
+        </div>
+
+        <div class="input-box">
+            <input type="number" id="idinp" placeholder="Enter a id task to delete.">
+
+            <button id="delete">❌</button>
+        </div>
+
+        <div class="cont">
+
+            <div class="update">
+                <input type="number" id="id" placeholder="Enter id to update todo...">
+                
+                <input type="text" id="task" placeholder="new task">
+            </div>
+            <div class="b">
+                
+                <button id="update">🆕 update todo</button>
+            </div>
+        </div>
+
+        <div class="cont">
+            
+            <div class="update">
+                <input type="number" id="updateId" placeholder="Enter todo id">
+                
+                <input type="text" id="updateTask" placeholder="New task">
+                
+            </div>
+            <div class="b">
+                <button id="patchBtn">📝 Update only fields</button>
+
+            </div>
+        </div>
+
+        <button id="btnf">📥 Load Todos</button>
+
+        <ul id="ul">
+            <p class="empty">No todos yet...</p>
+        </ul>
+
+    </div>
 
 </body>
+
 </html>

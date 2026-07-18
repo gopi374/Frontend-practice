@@ -9,7 +9,9 @@ const getStudents = (req,res)=>{
 
 const deleteUser = (req,res)=>{
     const stdId = parseInt(req.params.id);
+    
     let prevlen = students.length;
+
     students = students.filter(u => u.id !== stdId);
     if(prevlen == students.length) res.status(404).send("User Not Exist 🚫")
     res.status(200).json({
