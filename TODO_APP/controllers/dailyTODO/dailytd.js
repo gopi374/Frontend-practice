@@ -101,4 +101,8 @@ const updateTodosField=(req, res) => {
     });
 
 }
+const resettodo = (req,res)=>{
+    
+}
+
 module.exports = {getdata,createTODO,deleteTodo,updateTodo,updateTodosField}
