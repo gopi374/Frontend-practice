@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const path =require("path");
+const path = require("path");
 
 const app = express();
 
-app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.json());
+app.use(express.urlencoded());
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 const MG_URL = "mongodb://localhost:27017/todo_app";
 
@@ -16,8 +16,7 @@ mongoose
   .then(() => console.log(`🚀 DB is connected ${MG_URL}`))
   .catch(() => console.log(`Cannot connect due to :${err}`));
 
-
-  //2.collection schema
+//2.collection schema
 
 const todoschema = mongoose.Schema(
   {
@@ -28,75 +27,93 @@ const todoschema = mongoose.Schema(
   { timestamps: true },
 );
 
-const todo = new mongoose.model("todo",todoschema);
+const todo = new mongoose.model("todo", todoschema);
 
 //3 api endpoints
 
-app.post("/todos",async (req,res)=>{
-    // console.log(req.body.title);
-    // console.log(req.body.isCompleted);
+app.post("/todos", async (req, res) => {
+  // console.log(req.body.title);
+  // console.log(req.body.isCompleted);
 
-    const newtodo = new todo(req.body);
-    console.log(newtodo)
-    try{
-        const savetodo = await newtodo.save();
-        // console.log(savetodo)
-    }catch(err){
-        res.status(404).send("Error he")
-    }
+  const newtodo = new todo(req.body);
+  console.log(newtodo);
+  try {
+    const savetodo = await newtodo.save();
+    // console.log(savetodo)
+  } catch (err) {
+    res.status(404).send("Error he");
+  }
 
-    res.status(201).json({
-        message:"new todo created & saved !",
-        data : newtodo,
-    })
-})
-
-app.get("/todos",async(req,res)=>{
-    const todos = await todo.find().sort({priority:-1,createdAt:-1})
-    try{
-        res.status(200).json({
-            message:"All todos !",
-            Todos : todos,
-        });
-    }catch(err){
-        res.status(404).send(err);
-    }
-})
-
-app.delete("/todos/:id",async(req,res)=>{
-    try{
-    const deletetodo = await todo.findByIdAndDelete(req.params.id);
-
-    if(!deletetodo){
-        res.status(404).send("todo not found")
-    }
-    res.status(200).json({
-        message:"deleted"
-    });
-    }catch(err){
-        res.status(500).send(err);
-    }
+  res.status(201).json({
+    message: "new todo created & saved !",
+    data: newtodo,
+  });
 });
 
-app.patch("/todos/:id/priority",async(req,res)=>{
-    const {action} = req.body; //{"action":"increased"} OR {"action":"decrease"}
-    try{
+app.get("/todos", async (req, res) => {
+  const todos = await todo.find().sort({ priority: -1, createdAt: -1 });
+  try {
+    res.status(200).json({
+      message: "All todos !",
+      Todos: todos,
+    });
+  } catch (err) {
+    res.status(404).send(err);
+  }
+});
+
+app.delete("/todos/:id", async (req, res) => {
+  try {
+    const deletetodo = await todo.findByIdAndDelete(req.params.id);
+
+    if (!deletetodo) {
+      res.status(404).send("todo not found");
+    }
+    res.status(200).json({
+      message: "deleted",
+    });
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+app.patch("/todos/:id/priority", async (req, res) => {
+  const { action } = req.body; //{"action":"increased"} OR {"action":"decrease"}
+  try {
     const td = await todo.findById(req.params.id);
 
-    if(!td) res.status(404).send("Todo not found !")
+    if (!td) res.status(404).send("Todo not found !");
 
-    if(action === "increase") td.priority +=1;
-    else if(action === "decrease") td.priority -=1;
-    else res.status(404).send("Action must be increase or decrease ")
+    if (action === "increase") td.priority += 1;
+    else if (action === "decrease") td.priority -= 1;
+    else res.status(404).send("Action must be increase or decrease ");
 
     await td.save();
     res.status(200).send("priority updated !");
+  } catch (err) {
+    console.log(err);
+  }
+});
 
-    }catch(err){
-        console.log(err)
-    } 
-})
+app.put("/todos/:id", async (req, res) => {
+  try {
+    const updated = await todo.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
 
+    if (!updated) {
+      return res.status(404).send("Todo not found");
+    }
+
+    res.status(200).json({
+      message: "Updated successfully!",
+      Todos: updated,
+    });
+  } catch (err) {
+    res.status(400).send(err);
+  }
+});
 app.listen(4000, () => {
   console.log("🚀 Server is listening on PORT :4000");
 });
