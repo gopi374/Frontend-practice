@@ -16,9 +16,9 @@ app.use(express.json());
 const SECRET_KEY = "my_super_secret_key";
 
 app.post("/api/login", (req, res) => {
-  const user = { id: 101, username: "umar_dev", role: "admin" };
+  const user = { id: 101, username: "Alex_dev", role: "admin" };
 
-  const token = jwt.sign(user, SECRET_KEY, { expiresIn: "12h" });
+  const token = jwt.sign(user, SECRET_KEY, { expiresIn: "48h" });
 
   res.status(200).json({
     message:"Login  Successful !",
