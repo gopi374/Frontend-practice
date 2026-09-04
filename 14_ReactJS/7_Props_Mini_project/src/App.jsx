@@ -1,9 +1,13 @@
-import React from 'react'
+import Card from './components/Card';
 
 const App = () => {
+  
   return (
-    <div>
-      App
+    <div className='parent'>
+      {/* {jobOpenings.map(function(){
+        return <Card title/>
+      })} */}
+      <Card/>
     </div>
   )
 }

@@ -9,5 +9,31 @@ body {
   width: 100%;
   height: 100%;
   color: aquamarine;
-  background-color: #000;
+  /* background-color: #000; */
+}
+
+.parent{
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  gap: 20px;
+}
+
+.child{
+  background-color: #bd3535;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+}
+
+.top{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img{
+  width: 50px;
+  border-radius: 100px;
 }
