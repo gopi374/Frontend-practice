@@ -1,0 +1,1 @@
+// Arrays - it is an data structure
