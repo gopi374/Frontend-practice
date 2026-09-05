@@ -96,9 +96,14 @@ const jobOpenings = [
 const App = () => {
   return (
     <div className="parent">
-      {jobOpenings.map((job, index) => (
-        <Card key={index} {...job} />
-      ))}
+      {jobOpenings.map((elem,idx) => (
+        <div key={idx}>
+          
+        <Card company={elem.company} posted={elem.posted} logo={elem.logo} title={elem.title} 
+        location={elem.location} type={elem.type} salary={elem.salary}/>
+      
+        </div>
+        ))}
     </div>
   );
 };
