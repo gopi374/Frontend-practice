@@ -113,9 +113,8 @@ function createGreeting(greetingWord) {
 }
 const sayHi = createGreeting("Hi");
 sayHi("Alice"); // Outputs: Hi, Alice
-
-
 */
+
 
 //<-- Sysnchronous and Asynchronous -->
 
@@ -134,6 +133,7 @@ Example:
 
 Sync: Standing in a queue until your turn.
 Async: Ordering food and chatting while waiting for it.
+
 2. Timers: setTimeout() and setInterval()
 
 These are JavaScript functions used to schedule code execution.
@@ -164,13 +164,38 @@ Too many nested callbacks create Callback Hell, making code difficult to read.
 
 Example:
 
-stepOne(() => {
-  stepTwo(() => {
-    stepThree();
-  });
+function step1(callback) {
+    setTimeout(() => {
+        console.log("Step 1 completed");
+        callback();
+    }, 1000);
+}
+
+function step2(callback) {
+    setTimeout(() => {
+        console.log("Step 2 completed");
+        callback();
+    }, 1000);
+}
+
+function step3(callback) {
+    setTimeout(() => {
+        console.log("Step 3 completed");
+        callback();
+    }, 1000);
+}
+
+step1(() => {
+    step2(() => {
+        step3(() => {
+            console.log("All steps completed");
+        });
+    });
 });
 
 
+
+/*
 4. Promises
 
 A Promise is an object that represents the future result of an asynchronous operation.
@@ -187,12 +212,99 @@ Use:
 .catch() for errors.
 
 Example:
-
 fetchData()
-  .then(data => console.log(data))
-  .catch(error => console.log(error));
+.then(data => console.log(data))
+.catch(error => console.log(error));
 
-*/
+function stepOne(){
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      console.log("step 1 is completed")
+      resolve();
+    }, 1000);
+  })
+}
+
+function stepTwo(){
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      console.log("step 2 is completed")
+      resolve();
+    }, 1000);
+  })
+}
+
+function stepThree(){
+  return new Promise((resolve)=>{
+    setTimeout(() => {
+      console.log("step 3 is completed")
+      resolve();
+    }, 1000);
+  })
+}
+
+Promise.allSettled([
+    st.resolve("Task 1 completed"),
+    Promise.reject("Task 2 failed"),
+    Promise.resolve("Task 3 completed")
+])/*
+    .then((results) => console.log(results));
+
+// ways to handle promise 
+
+// 1. Promise chaining
+// stepOne()
+//   .then(stepTwo)
+//   .then(stepThree)
+//   .then(()=>console.log("all steps completed"))
+
+// 2. async/await
+// async function steps(){
+//   await stepOne();
+//   await stepTwo();
+//   await stepThree()
+
+//   console.log("finish")
+// }
+// steps()
+
+//3. async/await + try/catch
+
+// async function steps() {
+//   try {
+//     await stepOne();
+//     await stepTwo();
+//     await stepThree()
+//     console.log("finish")
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+// steps();
+
+// stepOne()
+//   .then(async () => {
+//     await stepTwo();
+//     await stepThree();
+//   })
+//   .then(() => {
+//     console.log("all steps completed");
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
+
+Promise.all([  //it runs all the promise simultanously
+  stepOne(),
+  stepTwo(),
+  stepThree()
+])
+.then(()=>{
+  console.log("finish")
+})
+.catch(err=>{console.log(err)})
+
 
 function checkLogin() {
   return new Promise((resolve, reject) => {
@@ -215,7 +327,8 @@ async function loginUser() {
   }
 }
 
-loginUser();
+loginUser()
+
 
 
 
@@ -246,3 +359,37 @@ async function runTasks() {
 }
 
 runTasks();
+
+*/
+
+function greet() {
+  console.log(`Hello ${this.name}`);
+}
+
+const person = {
+  name: "Rahul"
+};
+
+const newGreet = greet.bind(person);
+
+newGreet();
+// Hello Rahul
+
+
+function greet() {
+  console.log(this.name);
+}
+
+const user = {
+  name: "Rahul"
+};
+
+greet.call(user);
+// Rahul
+
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add.apply(null, [10, 20]));
+// 30
