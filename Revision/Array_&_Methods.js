@@ -2,14 +2,14 @@
 // in js array have multiple methods thst can use for different oprations .
 
 
-//initialisatoin
+//initialisation -- using litrals[]
 let arr = [];
 
 arr=[2,5,8,"String",true];
 console.log(arr);
 
-//different types of arrays creation
-let arr1 = new Array(5,8,3,9,3,"String",false);
+//array creation  -- using new Array() constructor
+let arr1 = new Array(5); //it create 5 length arrays
 console.log(arr1);
 
 //array to string
