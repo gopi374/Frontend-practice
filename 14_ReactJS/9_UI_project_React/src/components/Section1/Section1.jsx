@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from './Navbar'
-import LeftText from './LeftText'
+import Page1Content from './Page1Content'
 
 const Section1 = () => {
   return (<>
     <Navbar/>
-    <LeftText/>
+    <Page1Content/>
     
-    </>
+  </>
   )
 }
 
