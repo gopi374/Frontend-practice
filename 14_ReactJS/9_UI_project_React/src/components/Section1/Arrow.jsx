@@ -3,7 +3,7 @@ import React from 'react'
 const Arrow = () => {
     return (
         <div className='text-8xl font-bold'>
-            <i class="ri-arrow-right-up-line"></i>
+            <i className="ri-arrow-right-up-line"></i>
         </div>
     )
 }
