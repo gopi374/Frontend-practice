@@ -1,0 +1,19 @@
+{
+  "name": "3d-model-contact-page",
+  "version": "1.0.0",
+  "description": "A simple contact page featuring a 3D model using HTML and Tailwind CSS.",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "tailwindcss build src/styles.css -o dist/styles.css",
+    "watch": "tailwindcss build src/styles.css -o dist/styles.css --watch",
+    "start": "live-server"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

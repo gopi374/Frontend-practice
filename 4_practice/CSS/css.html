@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document -display flex , flex-wrap , flex-grow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: salmon;
+        }
+
+        /* Container defining the grid columns */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto 1fr auto auto;
+            /* The 3 column types side-by-side */
+            width: 100%;
+            /* Fills the screen horizontally */
+            /* max-width: 800px; */
+            /* Prevents it from getting too wide */
+            gap: 15px;
+            /* Space between columns */
+            padding: 15px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Base styles for visual clarity */
+        .item {
+            padding: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Distinct colors to see the column boundaries clearly */
+        .auto-col {
+            background-color: #3498db;
+            /* Blue */
+        }
+
+        .fixed-col {
+            background-color: #e74c3c;
+            /* Red */
+        }
+
+        .fr-col {
+            background-color: #2ecc71;
+            /* Green */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <!-- Column 1: Auto (Changes width based on text length) -->
+        <div class="item auto-col">
+            <p>Hugs text width.</p>
+        </div>
+
+        <!-- Column 2: Non-Auto (Locked at a specific pixel width) -->
+        <div class="item fixed-col">
+            <p>size.</p>
+        </div>
+
+        <!-- Column 3: Non-Auto (Takes up remaining fractional space) -->
+        <div class="item fr-col">
+            <h3>Col 3 (1fr) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ex hic aperiam vero commodi incidunt? Id, voluptatem! Illo exercitationem magni quibusdam. Labore temporibus officia voluptatibus perferendis ducimus voluptas pariatur dignissimos ab. Aliquam consequuntur sint numquam! Officia fuga explicabo quae recusandae enim incidunt, esse iste voluptatum tempore itaque unde delectus quo est, ea veritatis vero similique qui perferendis excepturi ducimus a eligendi aperiam quos odio! Consequuntur odit, quos alias magni maxime, quaerat fugiat rerum ab voluptas quas consectetur consequatur excepturi ad, voluptatum rem mollitia possimus! Aliquid eligendi vel maxime totam voluptas ex asperiores fugit. Exercitationem voluptatem quibusdam beatae saepe ullam pariatur tempore consequatur eaque dolores similique aperiam nisi molestiae, mollitia libero delectus natus vitae deleniti dolor provident. Fugiat, natus hic. Quasi quas quis eius harum veritatis voluptatem suscipit, est explicabo repellendus iste amet! Sunt molestiae praesentium veniam rem possimus quae qui necessitatibus placeat labore porro vitae quidem reprehenderit, sequi, quia, alias iste tempore sapiente incidunt eius doloremque est sit! Id quos aut in fugit nostrum quia veritatis dolor saepe at cupiditate esse rerum laboriosam, nemo earum doloremque, similique eius. At commodi impedit, rem quam eius ex, unde laudantium exercitationem consectetur quia nesciunt culpa eum facilis! Optio repellendus tempora esse sint voluptatum quisquam vero magni nisi minima obcaecati, cumque pariatur sit veritatis nesciunt et, ipsam saepe quam? Dolore numquam ipsa ut aut commodi eum eius quisquam reprehenderit eveniet nisi ea facilis quibusdam omnis mollitia, molestiae at error blanditiis distinctio non fugit voluptas velit voluptatum? Nisi qui provident facere! Nihil, maxime praesentium laudantium reiciendis libero eius voluptas nulla officia excepturi repellendus doloribus consectetur fugiat corrupti et ad in sapiente iusto quasi, quidem amet! Perferendis ad modi fuga exercitationem sunt odit ratione quam nulla quaerat repellat ut non, ipsum qui veritatis quis consequatur consectetur inventore porro a delectus expedita? Ducimus magnam labore totam incidunt? Quaerat, voluptate! Voluptate beatae repellat quas ullam hic corrupti consequatur ex fugit ratione. Blanditiis ipsum similique odit molestias quibusdam aperiam dolor vitae quidem sequi rerum? Atque aut officiis sint. Fugit a nostrum harum eius labore minus voluptate dolorum debitis unde voluptates laborum eos mollitia, recusandae voluptatibus impedit repellendus repellat neque consequatur architecto omnis. Asperiores deleniti quas, recusandae magni maiores eveniet beatae iure inventore voluptates, laudantium pariatur temporibus quam eligendi! Dolorum nemo eaque expedita, consequuntur voluptatibus ex odio non, qui alias error voluptas ducimus quo repellendus adipisci repellat reiciendis veniam, nobis asperiores! A iste veritatis quaerat assumenda cumque tenetur, dolorem fugiat soluta vitae at natus tempora, maxime impedit praesentium! Maiores nemo magnam rerum tempore doloribus suscipit, possimus adipisci in accusamus at rem, ea labore fuga consequatur tempora dolorum alias, voluptas ipsum! Sequi quos, earum officiis at sunt ipsum, consequatur facilis ut voluptates sed cumque autem iure quis culpa tempore ad. Doloremque tenetur error autem vel nostrum. Pariatur, corporis. Consequatur perspiciatis corrupti explicabo minus vel distinctio voluptate aut id, porro mollitia eveniet inventore dolor iusto eaque, quibusdam harum? Id fuga quaerat earum veniam recusandae maxime, doloremque repellat reiciendis aspernatur eaque libero! Quam vitae vero deserunt eligendi quae illo sint assumenda magni dicta?</h3>
+            <p>Fills remaining horizontal space.</p>
+        </div>
+        <div class="item auto-col">
+            <p>Hugs text width.</p>
+        </div>
+
+        <!-- Column 2: Non-Auto (Locked at a specific pixel width) -->
+        <div class="item fixed-col">
+            <p>Locked size.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
