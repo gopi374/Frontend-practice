@@ -3,6 +3,3 @@
 #cards::-webkit-scrollbar{
     display: none;
 }
-#cards:hover{
-    background: #000;
-}
