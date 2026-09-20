@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+main{
+    width:100%;
+    height: 100%;
+}
+.navbar{
+    margin: 0px 21px;
+    padding: 0px;
+    --bs-navbar-padding-y: 0;
+}
+
+.container-fluid{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background-color: crimson;
+    a{
+        padding-left: 20px;
+    }
+    h4{
+        padding-right: 20px;
+    }
+}
+
+/* From Uiverse.io by Juanes200122 */ 
+
+@keyframes bounce {
+  0%,
+  100% {
+    translate: 0px 36px;
+  }
+  50% {
+    translate: 0px 46px;
+  }
+}
+@keyframes bounce2 {
+  0%,
+  100% {
+    translate: 0px 46px;
+  }
+  50% {
+    translate: 0px 56px;
+  }
+}
+
+@keyframes umbral {
+  0% {
+    stop-color: #d3a5102e;
+  }
+  50% {
+    stop-color: rgba(211, 165, 16, 0.519);
+  }
+  100% {
+    stop-color: #d3a5102e;
+  }
+}
+@keyframes partciles {
+  0%,
+  100% {
+    translate: 0px 16px;
+  }
+  50% {
+    translate: 0px 6px;
+  }
+}
+#particles {
+  animation: partciles 4s ease-in-out infinite;
+}
+#animatedStop {
+  animation: umbral 4s infinite;
+}
+#bounce {
+  animation: bounce 4s ease-in-out infinite;
+  translate: 0px 36px;
+}
+#bounce2 {
+  animation: bounce2 4s ease-in-out infinite;
+  translate: 0px 46px;
+  animation-delay: 0.5s;
+}
+
+
+#card{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+.card {
+
+    margin: 25px;
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  max-width: 260px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.full-stats-btn {
+  background: white;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 4px 9px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.full-stats-btn:hover {
+  background: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.range {
+  margin-bottom: 4px;
+}
+
+.range-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.range-unit {
+  font-size: 28px;
+  font-weight: 300;
+  color: #b0b0b0;
+  margin-left: 4px;
+}
+
+.date-range {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  position: relative;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+  padding: 0 14px;
+}
+
+.avg-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+  height: 1.5px;
+  background: #e0e0e0;
+  z-index: 1;
+}
+
+.avg-label {
+  position: absolute;
+  top: -35%;
+  right: 0;
+  background: #1a1a1a;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  z-index: 2;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bar {
+  width: 20px;
+  background: linear-gradient(to bottom, #ff5a76 0%, #ff8fa3 100%);
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  transform: scale(1.05);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 1.5px solid #ff5a76;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot-top {
+  top: -4px;
+}
+
+.dot-bottom {
+  bottom: -4px;
+}
+
+.day-label {
+  font-size: 9px;
+  color: #999;
+  font-weight: 500;
+}
+
+/* Bar heights - Monday */
+.bar-mo {
+  height: 32px;
+  margin-bottom: 8px;
+}
+.bar-tu {
+  height: 44px;
+  margin-bottom: 14px;
+}
+.bar-we {
+  height: 25px;
+  margin-bottom: 12px;
+}
+.bar-th {
+  height: 32px;
+  margin-bottom: 10px;
+}
+.bar-fr {
+  height: 44px;
+  margin-bottom: 14px;
+}
+.bar-sa {
+  height: 38px;
+  margin-bottom: 12px;
+}
+.bar-su {
+  height: 28px;
+  margin-bottom: 13px;
+}
+
+.readings {
+  border-top: 1.5px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.reading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1.5px solid #f0f0f0;
+}
+
+.reading:last-child {
+  border-bottom: none;
+}
+
+.reading-time {
+  font-size: 9px;
+  color: #999;
+}
+
+.reading-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+
+#carouselExampleIndicators{
+    margin: 25px;
+}
+
+/* From Uiverse.io by csemszepp */ 
+.container {
+    width: 100%;
+    height: 100%;
+
+    /* From Uiverse.io by gharsh11032000 */
+    .card {
+        width: 320px;
+        height: 350px;
+        padding: 20px;
+        color: white;
+        background: linear-gradient(#212121, #212121) padding-box,
+            linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transform-origin: right bottom;
+        transition: all 2.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+
+    .card .main-content {
+        flex: 1;
+    }
+
+    .card .header span:first-child {
+        font-weight: 600;
+        color: #717171;
+        margin-right: 4px;
+    }
+
+    .card .heading {
+        font-size: 24px;
+        margin: 24px 0 16px;
+        font-weight: 600;
+    }
+
+    .card .categories {
+        display: flex;
+        gap: 8px;
+    }
+
+    .card .categories span {
+        background-color: #e81cff;
+        padding: 4px 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 50em;
+    }
+
+    .card .footer {
+        font-weight: 600;
+        color: #717171;
+        margin-right: 4px;
+    }
+
+    .card:hover {
+        rotate: 360deg;
+    }
+
+
+}
