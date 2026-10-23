@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    background-color: linear-gradient(to bottom, aqua , orange);
+}
+.body{
+    margin: 20px;
+    height: 50px;
+}
+#countlabel{
+    display: block;
+    align-items: center;
+    font-size: 50px;
+}
+.content{
+    height: 250px;
+    width: 300px;
+    background: #f4ac8f
+}
+.label{
+    padding-top: 20px;
+    padding-left: 100px;
+    margin: 25px;
+    color: rgb(15, 15, 17);
+}
+.btn{
+    transition: ease-in-out(4s);
+    width: 80px;
+    border-radius: 10px;
+    margin-inline-start: 10px;
+    background-color:  red;
+}
+.btn:hover{
+    transition: ease-in-out((0,0,10)50%,
+                            (0,0,20)50%
+                            (0,0,30)50%);
+    background: aqua;
+}

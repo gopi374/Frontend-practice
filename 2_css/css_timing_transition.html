@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS transition-timing-function Property</title>
+    <style>
+        div {
+            height: 75px;
+            width: 75px;
+            background: yellowgreen;
+            color: red;
+            transition: width 5s;
+        }
+
+        #div1 {
+            transition-timing-function: linear;
+        }
+
+        #div2 {
+            transition-timing-function: ease;
+        }
+
+        #div3 {
+            transition-timing-function: ease-in;
+        }
+
+        #div4 {
+            transition-timing-function: ease-out;
+        }
+
+        div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The transition-timing-function Property.</h1>
+    <p>
+        This is an example for the linear value in 
+        the transition-timing-function property.
+    </p>
+    <div id="div1">linear</div>
+
+    <p>
+        This is an example for the ease value in 
+        the transition-timing-function property.
+    </p>
+    <div id="div2">ease</div>
+
+    <p>
+        This is an example for the ease-in value in 
+        the transition-timing-function property.
+    </p>
+    <div id="div3">ease-in</div>
+
+    <p>
+        This is an example for the ease-out value in 
+        the transition-timing-function property.
+    </p>
+    <div id="div4">ease-out</div>
+</body>
+
+</html>

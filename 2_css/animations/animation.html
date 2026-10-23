@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .ripple-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid;
+            animation: ripple 2s infinite ease-out;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle:nth-child(1) { animation-delay: 0s; border-color: #00ffff; }
+        .circle:nth-child(2) { animation-delay: 0.2s; border-color: #00ccff; }
+        .circle:nth-child(3) { animation-delay: 0.4s; border-color: #0099ff; }
+        .circle:nth-child(4) { animation-delay: 0.6s; border-color: #6600ff; }
+        .circle:nth-child(5) { animation-delay: 0.8s; border-color: #9900ff; }
+
+        @keyframes ripple {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100% {
+                width: 200px;
+                height: 200px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ripple-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

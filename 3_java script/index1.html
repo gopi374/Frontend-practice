@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <img id="myimg" src="28.jpg" width="200px"><br>
+    <p id="mrk">Choose a number between 0 and 10:</p>
+    <input id="inp">
+    <button onclick="myfunction()">Submit</button>
+    <p id="result"></p>
+    
+    <button id="more">change</button>
+    <button onclick="document.getElementById('myimg').src='28.jpg'" style="background-color: aqua;"><<</button>
+
+    <script>
+        document.getElementById('more').addEventListener{'click', function()
+        let one = document.getElementById()
+    }
+        document.getElementById("mrk").innerHTML = "Hello world";
+        function myfunction() {
+            let x = document.getElementById("inp").value;
+            let text;
+            if (isNaN(x) || x < 0 || x > 10) {
+                text = "Invalid input";
+            } else {
+                text = "Input OK";
+                console.log("your input :",inp)
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
+ 

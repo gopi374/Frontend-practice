@@ -1,0 +1,49 @@
+<html>
+<head>
+    <style>
+        .parent {
+            position: relative;
+            z-index: 1;
+            background-color: lightgray;
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+        }
+
+        .child1 {
+            position: absolute;
+            z-index: 1;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .child2 {
+            position: absolute;
+            z-index: 3;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            top: 50px;
+            left: 50px;
+        }
+        .child3 {
+            position: absolute;
+            z-index: 2;
+            opacity: 0.5;
+            background-color: yellow;
+            width: 120px;
+            height: 120px;
+            top: 120px;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+
+    </div>
+</body>
+</html>

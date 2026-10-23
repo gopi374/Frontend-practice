@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+input{
+    margin: 10px;
+    width: 200px;
+    padding: 5px 5px;
+}
+
+button{
+    background-color: aqua;
+    color: black;
+    width: 70px;
+    padding: 5px 5px;
+}
