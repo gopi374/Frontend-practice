@@ -150,16 +150,75 @@
 // console.log(arr)
 
 //finding first non repeating character in string
-let str = "haeoloe"
-for(let i=0;i<str.length;i++){
-    let n=0;
-    for(let j=0;j<str.length;j++){
-        if(str[i] === str[j]){
-            n++;
-        }
-    }
-    if(n<2){
-        console.log(str[i])
-        return;
-    }
-}
+// let str = "haeoloe"
+// for(let i=0;i<str.length;i++){
+//     let n=0;
+//     for(let j=0;j<str.length;j++){
+//         if(str[i] === str[j]){
+//             n++;
+//         }
+//     }
+//     if(n<2){
+//         console.log(str[i])
+//         return;
+//     }
+// }
+
+//double of every element in array
+// let arr=[1,2,5,6,75,54,245,10]
+// let double  = arr.map((n)=>n*2);
+// console.log(double)
+
+// let sum = arr.reduce((sum,num)=>sum+num,0);
+// console.log(sum)
+
+//convert array of object into another format
+
+// let arr= [
+//     {
+//         id:1,
+//         name:"Gopi"
+//     },
+//     {
+//         id:1,
+//         name:"ALex"
+//     },
+//     {
+//         id:1,
+//         name:"JAck"
+//     },
+//     {
+//         id:1,
+//         name:"ALice"
+//     },
+// ]
+
+// let names = arr.map(n=>n.name)
+// console.log(names)
+
+//sort arr of obj by age
+// let arr= [
+//     {
+//         age:45,
+//         name:"Gopi",
+//         salary:25000
+//     },
+//     {
+//         age:1,
+//         name:"ALex",
+//         salary:2040
+//     },
+//     {
+//         age:14,
+//         name:"JAck",
+//         salary:2004
+//     },
+//     {
+//         age:17,
+//         name:"ALice",
+//         salary:2000,
+//     },
+// ]
+
+// console.log(arr.sort((a,b)=>a.salary-b.salary))
+
