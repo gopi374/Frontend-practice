@@ -93,3 +93,33 @@
 // }
 // console.log(map)
 
+//prime number 
+// function checkPrime(n){
+//     let isPrime = true;
+
+//     if(n<=1){
+//         isPrime=false;
+//     }
+//     else{
+//         for(let i=2;i<n;i++){
+//             if(n%i===0){
+//                 isPrime=false;
+//                 break;
+//             }
+//         }
+//     }
+
+//     if(isPrime){
+//         console.log("Pime number")
+//     }else{
+//         console.log("not prime")
+//     }
+// }
+
+// checkPrime(10)
+
+// sum of all number in arr
+// let arr = [1,2,53,4,815,9,5,74,6,5]
+// let sum = arr.reduce((s,n)=>s+n,0)
+// console.log(sum)
+
