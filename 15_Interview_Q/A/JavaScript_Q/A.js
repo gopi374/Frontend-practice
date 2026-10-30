@@ -1,6 +1,5 @@
 // let str= "hello";
 
-
 // function reversed(str){
 //     let rev = "";
 
@@ -18,7 +17,6 @@
 // }else{
 //     console.log("not palindrone")
 // }
-
 
 //find the largest and secondLarget number
 // let arr = [1,2,53,67,58,1,14,57,594]
@@ -52,10 +50,9 @@
 //     if(!isdup){
 //         unique.push(arr1[i]);
 //     }
-    
+
 // }
 // console.log(unique)
-
 
 //find duplicates
 // let arr=[1,2,5,3,6,41,1,2,5]
@@ -93,7 +90,7 @@
 // }
 // console.log(map)
 
-//prime number 
+//prime number
 // function checkPrime(n){
 //     let isPrime = true;
 
@@ -123,3 +120,46 @@
 // let sum = arr.reduce((s,n)=>s+n,0)
 // console.log(sum)
 
+//find common of two arrays
+// let arr = [1,2,3,4,5]
+// let arr1 = [3,4,5,6,87]
+
+// let comm = [];
+// for(let i=0;i<arr.length;i++){
+//     for(let j=0;j<arr1.length;j++){
+//         if(arr[i]===arr1[j]){
+//             comm.push(arr[i])
+//         }
+// }
+// }
+
+// console.log(comm)
+
+//sort arr without using sort()
+
+// let arr = [14, 25, 32, 1, 25, 6, 58, 3];
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = i+1; j < arr.length; j++) {
+//     if (arr[i]>arr[j]) {
+//         let temp = arr[i];
+//         arr[i]=arr[j];
+//         arr[j]=temp;
+//     }
+//   }
+// }
+// console.log(arr)
+
+//finding first non repeating character in string
+let str = "haeoloe"
+for(let i=0;i<str.length;i++){
+    let n=0;
+    for(let j=0;j<str.length;j++){
+        if(str[i] === str[j]){
+            n++;
+        }
+    }
+    if(n<2){
+        console.log(str[i])
+        return;
+    }
+}
