@@ -229,10 +229,36 @@
 // }
 // console.log(rev)
 
-console.log([]+[]) //return empty string
-console.log({}+{}) //[obj obj][obj obj]
-console.log("10"+2) //102
-console.log("12"+"15") //1215
-console.log("10"-2) //8
-console.log("1"+2+"1")
-console.log([12]+[12]) //1212
+// console.log([]+[]) //return empty string
+// console.log({}+{}) //[obj obj][obj obj]
+// console.log("10"+2) //102
+// console.log("12"+"15") //1215
+// console.log("10"-2) //8
+// console.log("1"+2+"1")
+// console.log([12]+[12]) //1212
+
+
+// console.log(typeof "string")
+// console.log(typeof null)
+// console.log(typeof 155)
+// console.log(typeof true)
+
+
+// console.log(typeof null); 
+// console.log(typeof NaN);
+// console.log(typeof []);
+// console.log(typeof {});
+
+// console.log(10 + "20");
+// console.log(10 - "5");
+// console.log("10" * 2);
+// console.log("10" / 2);
+
+// console.log(true + true);
+// console.log(false + 10);
+// console.log(true + "10");
+
+console.log(5 == "5");
+console.log(5 === "5");
+console.log(null == undefined);
+console.log(null === undefined);
