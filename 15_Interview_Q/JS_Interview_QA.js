@@ -222,3 +222,17 @@
 
 // console.log(arr.sort((a,b)=>a.salary-b.salary))
 
+// let str = "hello";
+// let rev = ""
+// for(let i = str.length-1;i>=0;i--){
+//     rev+=str[i];
+// }
+// console.log(rev)
+
+console.log([]+[]) //return empty string
+console.log({}+{}) //[obj obj][obj obj]
+console.log("10"+2) //102
+console.log("12"+"15") //1215
+console.log("10"-2) //8
+console.log("1"+2+"1")
+console.log([12]+[12]) //1212
