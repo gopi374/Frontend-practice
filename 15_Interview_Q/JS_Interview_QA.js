@@ -244,21 +244,26 @@
 // console.log(typeof true)
 
 
-// console.log(typeof null); 
-// console.log(typeof NaN);
-// console.log(typeof []);
-// console.log(typeof {});
+console.log(typeof null); 
+console.log(typeof NaN);
+console.log(typeof []);
+console.log(typeof {});
 
-// console.log(10 + "20");
-// console.log(10 - "5");
-// console.log("10" * 2);
-// console.log("10" / 2);
+console.log(10 + "20");
+console.log(10 - "5");
+console.log("10" * 2);
+console.log("10" / 2);
 
-// console.log(true + true);
-// console.log(false + 10);
-// console.log(true + "10");
+console.log(true + true);
+console.log(false + 10);
+console.log(true + "10");
 
 console.log(5 == "5");
 console.log(5 === "5");
 console.log(null == undefined);
 console.log(null === undefined);
+
+const obj ={
+    a:1,
+    b:2
+}
